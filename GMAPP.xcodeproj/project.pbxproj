@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		7ACB129925EAA22C00898A59 /* GMAPPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB129825EAA22C00898A59 /* GMAPPApp.swift */; };
-		7ACB129B25EAA22C00898A59 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB129A25EAA22C00898A59 /* ContentView.swift */; };
+		7ACB129B25EAA22C00898A59 /* GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB129A25EAA22C00898A59 /* GamesView.swift */; };
 		7ACB129D25EAA22C00898A59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ACB129C25EAA22C00898A59 /* Assets.xcassets */; };
 		7ACB12A025EAA22C00898A59 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ACB129F25EAA22C00898A59 /* Preview Assets.xcassets */; };
 		7ACB12AB25EAA22C00898A59 /* GMAPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB12AA25EAA22C00898A59 /* GMAPPTests.swift */; };
 		7ACB12B625EAA22C00898A59 /* GMAPPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB12B525EAA22C00898A59 /* GMAPPUITests.swift */; };
+		7ACB12C825EAA31A00898A59 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB12C725EAA31A00898A59 /* Game.swift */; };
+		7ACB134A25EAC67400898A59 /* GamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB134925EAC67400898A59 /* GamesViewModel.swift */; };
+		7ACB134B25EAC67400898A59 /* GamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB134925EAC67400898A59 /* GamesViewModel.swift */; };
+		7ACB134C25EAC67400898A59 /* GamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB134925EAC67400898A59 /* GamesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +39,7 @@
 /* Begin PBXFileReference section */
 		7ACB129525EAA22C00898A59 /* GMAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACB129825EAA22C00898A59 /* GMAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMAPPApp.swift; sourceTree = "<group>"; };
-		7ACB129A25EAA22C00898A59 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7ACB129A25EAA22C00898A59 /* GamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesView.swift; sourceTree = "<group>"; };
 		7ACB129C25EAA22C00898A59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ACB129F25EAA22C00898A59 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7ACB12A125EAA22C00898A59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +49,8 @@
 		7ACB12B125EAA22C00898A59 /* GMAPPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GMAPPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACB12B525EAA22C00898A59 /* GMAPPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMAPPUITests.swift; sourceTree = "<group>"; };
 		7ACB12B725EAA22C00898A59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ACB12C725EAA31A00898A59 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		7ACB134925EAC67400898A59 /* GamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +101,10 @@
 		7ACB129725EAA22C00898A59 /* GMAPP */ = {
 			isa = PBXGroup;
 			children = (
+				7ACB134725EAC65100898A59 /* ViewModels */,
+				7ACB133325EAB3D100898A59 /* Views */,
+				7ACB12C625EAA30700898A59 /* Models */,
 				7ACB129825EAA22C00898A59 /* GMAPPApp.swift */,
-				7ACB129A25EAA22C00898A59 /* ContentView.swift */,
 				7ACB129C25EAA22C00898A59 /* Assets.xcassets */,
 				7ACB12A125EAA22C00898A59 /* Info.plist */,
 				7ACB129E25EAA22C00898A59 /* Preview Content */,
@@ -128,6 +136,30 @@
 				7ACB12B725EAA22C00898A59 /* Info.plist */,
 			);
 			path = GMAPPUITests;
+			sourceTree = "<group>";
+		};
+		7ACB12C625EAA30700898A59 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7ACB12C725EAA31A00898A59 /* Game.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7ACB133325EAB3D100898A59 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7ACB129A25EAA22C00898A59 /* GamesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7ACB134725EAC65100898A59 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7ACB134925EAC67400898A59 /* GamesViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +291,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7ACB129B25EAA22C00898A59 /* ContentView.swift in Sources */,
+				7ACB134A25EAC67400898A59 /* GamesViewModel.swift in Sources */,
+				7ACB129B25EAA22C00898A59 /* GamesView.swift in Sources */,
+				7ACB12C825EAA31A00898A59 /* Game.swift in Sources */,
 				7ACB129925EAA22C00898A59 /* GMAPPApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ACB134B25EAC67400898A59 /* GamesViewModel.swift in Sources */,
 				7ACB12AB25EAA22C00898A59 /* GMAPPTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ACB134C25EAC67400898A59 /* GamesViewModel.swift in Sources */,
 				7ACB12B625EAA22C00898A59 /* GMAPPUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
