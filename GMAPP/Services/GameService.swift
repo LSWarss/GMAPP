@@ -47,9 +47,12 @@ class GameService {
                 return
             }
             let games = try! JSONDecoder().decode([Game].self, from: data!)
+            let result = games.sorted {
+                $0.formattedDate < $1.formattedDate
+            }
             
             DispatchQueue.main.async {
-                completion(games)
+                completion(result)
             }
         }
         .resume()

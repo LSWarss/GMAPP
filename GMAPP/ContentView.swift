@@ -29,12 +29,16 @@ struct ContentView: View {
                 }
                 .onAppear() {
                     GameService().getGamesForPlatform(platform: platform, completion: { (games) in
-                        self.games = games
+                        self.games = games.filter { game in
+                            return Helpers.postgresDateToDateConverter(from: game.formattedDate) > Date()
+                        }
                     })
                 }
                 .onChange(of: platform, perform: { platform in
                     GameService().getGamesForPlatform(platform: platform, completion: { (games) in
-                        self.games = games
+                        self.games = games.filter { game in
+                            return Helpers.postgresDateToDateConverter(from: game.formattedDate) > Date()
+                        }
                     })
                 })
                 
