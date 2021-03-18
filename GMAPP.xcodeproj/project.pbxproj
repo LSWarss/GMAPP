@@ -12,11 +12,23 @@
 		7A8FC9B62603BFB20051F56E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8FC9B52603BFB20051F56E /* Assets.xcassets */; };
 		7A8FC9B92603BFB20051F56E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8FC9B82603BFB20051F56E /* Preview Assets.xcassets */; };
 		7A8FC9C72603BFF00051F56E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9C62603BFF00051F56E /* Constants.swift */; };
-		7A8FC9CB2603BFFB0051F56E /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9CA2603BFFB0051F56E /* Helpers.swift */; };
 		7A8FC9CE2603C0320051F56E /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9CD2603C0320051F56E /* GameService.swift */; };
 		7A8FC9D12603C04C0051F56E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9D02603C04C0051F56E /* Game.swift */; };
 		7A8FC9D42603C05E0051F56E /* GameRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9D32603C05E0051F56E /* GameRow.swift */; };
+		7A8FC9DD2603C5B70051F56E /* GMAPP_Unit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9DC2603C5B70051F56E /* GMAPP_Unit_Tests.swift */; };
+		7A8FC9E72603C6090051F56E /* UtilitiesTests .swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9E62603C6090051F56E /* UtilitiesTests .swift */; };
+		7A8FC9EF2603C6C40051F56E /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9CA2603BFFB0051F56E /* Helpers.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7A8FC9DF2603C5B70051F56E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A8FC9A62603BFB10051F56E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A8FC9AD2603BFB10051F56E;
+			remoteInfo = GMAPP;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7A8FC9AE2603BFB10051F56E /* GMAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,10 +42,21 @@
 		7A8FC9CD2603C0320051F56E /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
 		7A8FC9D02603C04C0051F56E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		7A8FC9D32603C05E0051F56E /* GameRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRow.swift; sourceTree = "<group>"; };
+		7A8FC9DA2603C5B60051F56E /* GMAPP-Unit-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GMAPP-Unit-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A8FC9DC2603C5B70051F56E /* GMAPP_Unit_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMAPP_Unit_Tests.swift; sourceTree = "<group>"; };
+		7A8FC9DE2603C5B70051F56E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A8FC9E62603C6090051F56E /* UtilitiesTests .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UtilitiesTests .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7A8FC9AB2603BFB10051F56E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A8FC9D72603C5B60051F56E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				7A8FC9B02603BFB10051F56E /* GMAPP */,
+				7A8FC9DB2603C5B70051F56E /* GMAPP-Unit-Tests */,
 				7A8FC9AF2603BFB10051F56E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				7A8FC9AE2603BFB10051F56E /* GMAPP.app */,
+				7A8FC9DA2603C5B60051F56E /* GMAPP-Unit-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +141,16 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		7A8FC9DB2603C5B70051F56E /* GMAPP-Unit-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7A8FC9DC2603C5B70051F56E /* GMAPP_Unit_Tests.swift */,
+				7A8FC9DE2603C5B70051F56E /* Info.plist */,
+				7A8FC9E62603C6090051F56E /* UtilitiesTests .swift */,
+			);
+			path = "GMAPP-Unit-Tests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,6 +171,24 @@
 			productReference = 7A8FC9AE2603BFB10051F56E /* GMAPP.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7A8FC9D92603C5B60051F56E /* GMAPP-Unit-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A8FC9E12603C5B70051F56E /* Build configuration list for PBXNativeTarget "GMAPP-Unit-Tests" */;
+			buildPhases = (
+				7A8FC9D62603C5B60051F56E /* Sources */,
+				7A8FC9D72603C5B60051F56E /* Frameworks */,
+				7A8FC9D82603C5B60051F56E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A8FC9E02603C5B70051F56E /* PBXTargetDependency */,
+			);
+			name = "GMAPP-Unit-Tests";
+			productName = "GMAPP-Unit-Tests";
+			productReference = 7A8FC9DA2603C5B60051F56E /* GMAPP-Unit-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -147,6 +200,10 @@
 				TargetAttributes = {
 					7A8FC9AD2603BFB10051F56E = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					7A8FC9D92603C5B60051F56E = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 7A8FC9AD2603BFB10051F56E;
 					};
 				};
 			};
@@ -164,6 +221,7 @@
 			projectRoot = "";
 			targets = (
 				7A8FC9AD2603BFB10051F56E /* GMAPP */,
+				7A8FC9D92603C5B60051F56E /* GMAPP-Unit-Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -178,6 +236,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7A8FC9D82603C5B60051F56E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -186,16 +251,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A8FC9B42603BFB10051F56E /* ContentView.swift in Sources */,
+				7A8FC9EF2603C6C40051F56E /* Helpers.swift in Sources */,
 				7A8FC9D12603C04C0051F56E /* Game.swift in Sources */,
 				7A8FC9B22603BFB10051F56E /* GMAPPApp.swift in Sources */,
 				7A8FC9CE2603C0320051F56E /* GameService.swift in Sources */,
 				7A8FC9C72603BFF00051F56E /* Constants.swift in Sources */,
-				7A8FC9CB2603BFFB0051F56E /* Helpers.swift in Sources */,
 				7A8FC9D42603C05E0051F56E /* GameRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7A8FC9D62603C5B60051F56E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A8FC9DD2603C5B70051F56E /* GMAPP_Unit_Tests.swift in Sources */,
+				7A8FC9E72603C6090051F56E /* UtilitiesTests .swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7A8FC9E02603C5B70051F56E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A8FC9AD2603BFB10051F56E /* GMAPP */;
+			targetProxy = 7A8FC9DF2603C5B70051F56E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7A8FC9BB2603BFB20051F56E /* Debug */ = {
@@ -358,6 +440,46 @@
 			};
 			name = Release;
 		};
+		7A8FC9E22603C5B70051F56E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7KN966P9LP;
+				INFOPLIST_FILE = "GMAPP-Unit-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "lswarss.GMAPP-Unit-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GMAPP.app/GMAPP";
+			};
+			name = Debug;
+		};
+		7A8FC9E32603C5B70051F56E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7KN966P9LP;
+				INFOPLIST_FILE = "GMAPP-Unit-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "lswarss.GMAPP-Unit-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GMAPP.app/GMAPP";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -375,6 +497,15 @@
 			buildConfigurations = (
 				7A8FC9BE2603BFB20051F56E /* Debug */,
 				7A8FC9BF2603BFB20051F56E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A8FC9E12603C5B70051F56E /* Build configuration list for PBXNativeTarget "GMAPP-Unit-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A8FC9E22603C5B70051F56E /* Debug */,
+				7A8FC9E32603C5B70051F56E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

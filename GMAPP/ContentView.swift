@@ -12,9 +12,6 @@ struct ContentView: View {
     @State private var games = [Game]()
     @State private var platform = "PC"
     
-    private var pickerOrTab = true
-    let platformTypes = ["PC", "PlayStation 4" ,"PlayStation 5", "Xbox Series X", "Xbox One","Switch", "Stadia"]
-    
     var body: some View {
         ZStack{
             NavigationView {
@@ -23,7 +20,7 @@ struct ContentView: View {
                 }.navigationTitle("Games")
                 .toolbar {
                         Picker("Platform", selection: $platform) {
-                            ForEach(platformTypes, id: \.self){
+                            ForEach(Constants.platformTypes, id: \.self){
                                 Text($0)
                             }
                         }

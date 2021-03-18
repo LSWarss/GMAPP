@@ -27,5 +27,20 @@ class Helpers {
         
         return url
     }
+    
+    /**
+        Converts date in postgres format from GMAPI to Date format
+     */
+    static func postgresDateToDateConverter(from date: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        guard let returnDate = dateFormatter.date(from: date) else {
+            print("Wrong conversion ❌")
+            return Date()
+        }
+        
+        return returnDate
+    }
 
 }

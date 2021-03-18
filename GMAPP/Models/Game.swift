@@ -18,7 +18,7 @@ struct Game : Codable, Identifiable {
     
     var formattedDate : String {
         let release_array = release_date.split(separator: "-")
-        return String(release_array[0] + "-" + release_array[1] + "-" + release_array[2].suffix(2))
+        return String(release_array[0] + "-" + release_array[1] + "-" + release_array[2].prefix(2))
     }
     
     #if DEBUG
