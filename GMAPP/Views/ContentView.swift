@@ -16,7 +16,10 @@ struct ContentView: View {
         ZStack{
             NavigationView {
                 List(games) { game in
-                    GameRow(game: game)
+                    NavigationLink(
+                        destination: GameDetailsView(game: game)){
+                        GameRow(game: game)
+                    }
                 }.navigationTitle("Games")
                 .toolbar {
                         Picker("Platform", selection: $platform) {

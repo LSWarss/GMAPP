@@ -42,5 +42,17 @@ class Helpers {
         
         return returnDate
     }
+    
+    static func daysUntil(until date: Date) -> Int {
+        let userDate = Calendar.current.dateComponents([.day, .month, .year], from: date)
+            
+        let userDateComponents = DateComponents(calendar: Calendar.current, year: userDate.year!, month: userDate.month!, day: userDate.day!).date!
+            
+        let daysUntil = Calendar.current.dateComponents([.day], from: Date(), to: userDateComponents)
+            
+        return daysUntil.day!
+    }
+    
+    
 
 }
