@@ -29,14 +29,14 @@ struct ContentView: View {
                             }
                         }
                         .pickerStyle(MenuPickerStyle())
-    
                 }
                 .onAppear() {
+                    self.resultVisibile = false
                     GameService().getGames(platform: platform, completion: { result in
                         switch result {
                         case .success(let games):
                             self.games = games.filter { game in
-                                self.resultVisibile.toggle()
+                                self.resultVisibile = true
                                 return Helpers.postgresDateToDateConverter(from: game.formattedDate) > Date()
                             }
                         case .failure(_):
@@ -45,6 +45,7 @@ struct ContentView: View {
                     })
                 }
                 .onChange(of: platform, perform: { platform in
+                    self.resultVisibile = false
                     GameService().getGames(platform: platform, completion: { result in
                         switch result {
                         case .success(let games):

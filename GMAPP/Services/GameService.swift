@@ -41,8 +41,10 @@ class GameService {
                 let result = games.sorted {
                     $0.formattedDate < $1.formattedDate
                 }
+                Logger.shared.log("\(result.count)")
                 completion(.success(result))
             } catch {
+                Logger.shared.error("Decoding error")
                 completion(.failure(.decodingError))
             }
             
@@ -72,8 +74,10 @@ class GameService {
                 let result = games.sorted {
                     $0.formattedDate < $1.formattedDate
                 }
+                Logger.shared.log("\(result.count)")
                 completion(.success(result))
             } catch {
+                Logger.shared.error("Decoding error")
                 completion(.failure(.decodingError))
             }
             
