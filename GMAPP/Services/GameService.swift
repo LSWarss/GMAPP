@@ -30,6 +30,7 @@ class GameService {
             
             guard let data = data, error == nil else {
                 if let error = error {
+                    Logger.shared.error(error.localizedDescription)
                     completion(.failure(.domainError))
                 }
                 return
@@ -60,6 +61,7 @@ class GameService {
             
             guard let data = data, error == nil else {
                 if let error = error {
+                    Logger.shared.error(error.localizedDescription)
                     completion(.failure(.domainError))
                 }
                 return
