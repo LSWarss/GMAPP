@@ -19,43 +19,63 @@ class GameService {
     }
     
     
-    func getGames(completion:@escaping ([Game]) -> ()) {
+    func getGames(completion: @escaping (Result<[Game], NetworkError>) -> Void) {
         
         guard let url = Helpers.createUrl(baseComponents: self.baseComponents, pathParams: ["games/"]) else {
+            completion(.failure(.urlError))
             return
         }
             
-           URLSession.shared.dataTask(with: url) { (data, _, _) in
-               let games = try! JSONDecoder().decode([Game].self, from: data!)
-               
-               DispatchQueue.main.async {
-                   completion(games)
-               }
-           }
-           .resume()
-       }
-    
-    func getGamesForPlatform(platform: String, completion:@escaping ([Game]) -> ()) {
-        
-        guard let url = Helpers.createUrl(baseComponents: self.baseComponents, pathParams: ["games/", "platform/", platform]) else {
-            return
-        }
-        
-        URLSession.shared.dataTask(with: url) { (data, request, error) in
-            if let error = error {
-                print("❌ Error faced on url \(url.description): \(error)")
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            guard let data = data, error == nil else {
+                if let error = error {
+                    completion(.failure(.domainError))
+                }
                 return
             }
-            let games = try! JSONDecoder().decode([Game].self, from: data!)
-            let result = games.sorted {
-                $0.formattedDate < $1.formattedDate
+            
+            do {
+                let games = try JSONDecoder().decode([Game].self, from: data)
+                let result = games.sorted {
+                    $0.formattedDate < $1.formattedDate
+                }
+                completion(.success(result))
+            } catch {
+                completion(.failure(.decodingError))
             }
             
-            DispatchQueue.main.async {
-                completion(result)
-            }
+           }.resume()
+       }
+    
+    
+    func getGames(platform: String, completion: @escaping (Result<[Game], NetworkError>) -> Void) {
+        
+        guard let url = Helpers.createUrl(baseComponents: self.baseComponents, pathParams: ["games/", "platform/", platform]) else {
+            completion(.failure(.urlError))
+            return
         }
-        .resume()
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            guard let data = data, error == nil else {
+                if let error = error {
+                    completion(.failure(.domainError))
+                }
+                return
+            }
+            
+            do {
+                let games = try JSONDecoder().decode([Game].self, from: data)
+                let result = games.sorted {
+                    $0.formattedDate < $1.formattedDate
+                }
+                completion(.success(result))
+            } catch {
+                completion(.failure(.decodingError))
+            }
+            
+        }.resume()
     }
     
 }

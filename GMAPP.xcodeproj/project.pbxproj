@@ -19,6 +19,7 @@
 		7A8FC9E72603C6090051F56E /* UtilitiesTests .swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9E62603C6090051F56E /* UtilitiesTests .swift */; };
 		7A8FC9EF2603C6C40051F56E /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9CA2603BFFB0051F56E /* Helpers.swift */; };
 		7A8FC9FB2603CC980051F56E /* GameDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9FA2603CC980051F56E /* GameDetailsView.swift */; };
+		7A8FCA072605FA0A0051F56E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FCA062605FA0A0051F56E /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		7A8FC9DE2603C5B70051F56E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A8FC9E62603C6090051F56E /* UtilitiesTests .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UtilitiesTests .swift"; sourceTree = "<group>"; };
 		7A8FC9FA2603CC980051F56E /* GameDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsView.swift; sourceTree = "<group>"; };
+		7A8FCA062605FA0A0051F56E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			children = (
 				7A8FC9C62603BFF00051F56E /* Constants.swift */,
 				7A8FC9CA2603BFFB0051F56E /* Helpers.swift */,
+				7A8FCA062605FA0A0051F56E /* NetworkError.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				7A8FC9FB2603CC980051F56E /* GameDetailsView.swift in Sources */,
 				7A8FC9B22603BFB10051F56E /* GMAPPApp.swift in Sources */,
 				7A8FC9CE2603C0320051F56E /* GameService.swift in Sources */,
+				7A8FCA072605FA0A0051F56E /* NetworkError.swift in Sources */,
 				7A8FC9C72603BFF00051F56E /* Constants.swift in Sources */,
 				7A8FC9D42603C05E0051F56E /* GameRow.swift in Sources */,
 			);

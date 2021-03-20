@@ -20,12 +20,12 @@ struct GameRow: View {
                 .padding()
                 .scaledToFill()
             VStack(alignment: .leading) {
+                Text(game.title)
+                    .font(.callout)
                 HStack {
-                    Text(game.title)
-                        .font(.callout)
+                    Text(game.formattedDate)
                     Text(game.platform)
                 }
-                Text(game.formattedDate)
             }
         }
     }
