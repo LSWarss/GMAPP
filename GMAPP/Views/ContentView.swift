@@ -29,6 +29,7 @@ struct ContentView: View {
                             }
                         }
                         .pickerStyle(MenuPickerStyle())
+                        .accentColor(.purple)
                 }
                 .onAppear() {
                     self.resultVisibile = false
@@ -62,10 +63,12 @@ struct ContentView: View {
                 
             }
             if(resultVisibile == false){
-                Color.white
+                Color(UIColor.systemBackground)
                     .edgesIgnoringSafeArea(.all)
                 ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle())
+                    .progressViewStyle(CircularProgressViewStyle(tint: Color.purple)
+                    )
+                    .scaleEffect(2, anchor: .center)
             }
             
         }

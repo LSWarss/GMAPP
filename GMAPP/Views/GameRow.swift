@@ -18,10 +18,12 @@ struct GameRow: View {
         HStack {
             Image(systemName: "gamecontroller")
                 .padding()
+                .scaleEffect(1.5)
                 .scaledToFill()
             VStack(alignment: .leading) {
                 Text(game.title)
-                    .font(.callout)
+                    .font(.title3)
+                    .bold()
                 HStack {
                     Text(game.formattedDate)
                     Text(game.platform)
