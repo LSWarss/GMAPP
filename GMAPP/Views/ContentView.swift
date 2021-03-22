@@ -29,7 +29,6 @@ struct ContentView: View {
                             }
                         }
                         .pickerStyle(MenuPickerStyle())
-                        .accentColor(.purple)
                 }
                 .onAppear() {
                     self.resultVisibile = false
