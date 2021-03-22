@@ -31,17 +31,19 @@ struct GameRow: View {
                 }
             }
             
-//            Image(systemName: "star")
-//                .padding()
-//                .scaleEffect(1.5)
-//                .scaledToFill()
-//                .onTapGesture {
-//                    self.foregroundColor(Color.green)
-//                    fav.games.append(self.game)
-//                    Logger.shared.log("Added game to fav: \(self.game.title)")
-//                    Logger.shared.log("Number of fav's right now: \(fav.games.count)")
-//                }
-            Toggle("🔥", isOn: $isFav)
+            Image(systemName: "star")
+                .padding()
+                .scaleEffect(1.5)
+                .scaledToFill()
+                .onTapGesture {
+                    self.foregroundColor(Color.green)
+                    fav.games.append(self.game)
+                    Logger.shared.log("Added game to fav: \(self.game.title)")
+                    Logger.shared.log("Number of fav's right now: \(fav.games.count)")
+                }
+//            Toggle("", isOn: $isFav)
+                
+            
         }
     }
     
