@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct GMAPPApp: App {
+    // This handle lifeccycle of  object
+    @StateObject var fav = FavouriteGames()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .environmentObject(fav)
         }
     }
 }

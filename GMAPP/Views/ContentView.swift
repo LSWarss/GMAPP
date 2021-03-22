@@ -11,6 +11,7 @@ struct ContentView: View {
     
     @State private var games = [Game]()
     @State private var platform = "PC"
+    @State private var resultVisibile = false
     
     var body: some View {
         ZStack{
@@ -28,24 +29,47 @@ struct ContentView: View {
                             }
                         }
                         .pickerStyle(MenuPickerStyle())
-    
                 }
                 .onAppear() {
-                    GameService().getGamesForPlatform(platform: platform, completion: { (games) in
-                        self.games = games.filter { game in
-                            return Helpers.postgresDateToDateConverter(from: game.formattedDate) > Date()
+                    self.resultVisibile = false
+                    GameService().getGames(platform: platform, completion: { result in
+                        switch result {
+                        case .success(let games):
+                            self.games = games.filter { game in
+                                self.resultVisibile = true
+                                return Helpers.postgresDateToDateConverter(from: game.formattedDate) > Date()
+                            }
+                        case .failure(_):
+                            self.games = [Game.example]
                         }
                     })
                 }
                 .onChange(of: platform, perform: { platform in
-                    GameService().getGamesForPlatform(platform: platform, completion: { (games) in
-                        self.games = games.filter { game in
-                            return Helpers.postgresDateToDateConverter(from: game.formattedDate) > Date()
+                    self.resultVisibile = false
+                    GameService().getGames(platform: platform, completion: { result in
+                        switch result {
+                        case .success(let games):
+                            self.games = games.filter { game in
+                                self.resultVisibile.toggle()
+                                return Helpers.postgresDateToDateConverter(from: game.formattedDate) > Date()
+                            }
+                            self.resultVisibile = true
+                        case .failure(_):
+                            self.games = [Game.example]
                         }
                     })
                 })
                 
             }
+            if(resultVisibile == false){
+                Color(UIColor.systemBackground)
+                    .edgesIgnoringSafeArea(.all)
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: Color.purple)
+                    )
+                    .scaleEffect(2, anchor: .center)
+            }
+            
         }
     }
 }

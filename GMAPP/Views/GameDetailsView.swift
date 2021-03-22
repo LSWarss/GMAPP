@@ -9,7 +9,6 @@ import SwiftUI
 
 struct GameDetailsView: View {
 
-
     var game : Game
     
     var body: some View {

@@ -19,6 +19,11 @@
 		7A8FC9E72603C6090051F56E /* UtilitiesTests .swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9E62603C6090051F56E /* UtilitiesTests .swift */; };
 		7A8FC9EF2603C6C40051F56E /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9CA2603BFFB0051F56E /* Helpers.swift */; };
 		7A8FC9FB2603CC980051F56E /* GameDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9FA2603CC980051F56E /* GameDetailsView.swift */; };
+		7A8FCA072605FA0A0051F56E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FCA062605FA0A0051F56E /* NetworkError.swift */; };
+		7A8FCA18260655900051F56E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FCA17260655900051F56E /* Logger.swift */; };
+		7AA12181260865F400CE55DC /* FavouriteGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA12180260865F400CE55DC /* FavouriteGames.swift */; };
+		7AA121852608682600CE55DC /* FavouriteGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA121842608682600CE55DC /* FavouriteGamesView.swift */; };
+		7AA121892608686800CE55DC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA121882608686800CE55DC /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D083CD6E5A20D099C25DC8E /* Pods-GMAPP-Unit-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMAPP-Unit-Tests.release.xcconfig"; path = "Target Support Files/Pods-GMAPP-Unit-Tests/Pods-GMAPP-Unit-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		350C1202B3FEF8016D1D3825 /* Pods-GMAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMAPP.debug.xcconfig"; path = "Target Support Files/Pods-GMAPP/Pods-GMAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		7A8FC9AE2603BFB10051F56E /* GMAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8FC9B12603BFB10051F56E /* GMAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMAPPApp.swift; sourceTree = "<group>"; };
 		7A8FC9B32603BFB10051F56E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +55,13 @@
 		7A8FC9DE2603C5B70051F56E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A8FC9E62603C6090051F56E /* UtilitiesTests .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UtilitiesTests .swift"; sourceTree = "<group>"; };
 		7A8FC9FA2603CC980051F56E /* GameDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsView.swift; sourceTree = "<group>"; };
+		7A8FCA062605FA0A0051F56E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		7A8FCA17260655900051F56E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		7AA12180260865F400CE55DC /* FavouriteGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteGames.swift; sourceTree = "<group>"; };
+		7AA121842608682600CE55DC /* FavouriteGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteGamesView.swift; sourceTree = "<group>"; };
+		7AA121882608686800CE55DC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FA93DEFED600E933FA3A0E3B /* Pods-GMAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMAPP.release.xcconfig"; path = "Target Support Files/Pods-GMAPP/Pods-GMAPP.release.xcconfig"; sourceTree = "<group>"; };
+		FFEAEB38B0B85DC00E758D99 /* Pods-GMAPP-Unit-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMAPP-Unit-Tests.debug.xcconfig"; path = "Target Support Files/Pods-GMAPP-Unit-Tests/Pods-GMAPP-Unit-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A214BD32608701900DDA19B /* UtilViews */ = {
+			isa = PBXGroup;
+			children = (
+				7A8FC9D32603C05E0051F56E /* GameRow.swift */,
+			);
+			path = UtilViews;
+			sourceTree = "<group>";
+		};
 		7A8FC9A52603BFB10051F56E = {
 			isa = PBXGroup;
 			children = (
 				7A8FC9B02603BFB10051F56E /* GMAPP */,
 				7A8FC9DB2603C5B70051F56E /* GMAPP-Unit-Tests */,
 				7A8FC9AF2603BFB10051F56E /* Products */,
+				B88C2ED3737AFA68F558481B /* Pods */,
+				A606C6BF508AE970A46C5817 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				7A8FC9D02603C04C0051F56E /* Game.swift */,
+				7AA12180260865F400CE55DC /* FavouriteGames.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -128,9 +153,11 @@
 		7A8FC9C42603BFD50051F56E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7A214BD32608701900DDA19B /* UtilViews */,
 				7A8FC9B32603BFB10051F56E /* ContentView.swift */,
-				7A8FC9D32603C05E0051F56E /* GameRow.swift */,
 				7A8FC9FA2603CC980051F56E /* GameDetailsView.swift */,
+				7AA121842608682600CE55DC /* FavouriteGamesView.swift */,
+				7AA121882608686800CE55DC /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -140,6 +167,8 @@
 			children = (
 				7A8FC9C62603BFF00051F56E /* Constants.swift */,
 				7A8FC9CA2603BFFB0051F56E /* Helpers.swift */,
+				7A8FCA062605FA0A0051F56E /* NetworkError.swift */,
+				7A8FCA17260655900051F56E /* Logger.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -154,6 +183,24 @@
 			path = "GMAPP-Unit-Tests";
 			sourceTree = "<group>";
 		};
+		A606C6BF508AE970A46C5817 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B88C2ED3737AFA68F558481B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				350C1202B3FEF8016D1D3825 /* Pods-GMAPP.debug.xcconfig */,
+				FA93DEFED600E933FA3A0E3B /* Pods-GMAPP.release.xcconfig */,
+				FFEAEB38B0B85DC00E758D99 /* Pods-GMAPP-Unit-Tests.debug.xcconfig */,
+				0D083CD6E5A20D099C25DC8E /* Pods-GMAPP-Unit-Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -161,9 +208,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A8FC9BD2603BFB20051F56E /* Build configuration list for PBXNativeTarget "GMAPP" */;
 			buildPhases = (
+				FC29BBE15202D304384CC09A /* [CP] Check Pods Manifest.lock */,
 				7A8FC9AA2603BFB10051F56E /* Sources */,
 				7A8FC9AB2603BFB10051F56E /* Frameworks */,
 				7A8FC9AC2603BFB10051F56E /* Resources */,
+				7A8FCA12260653D60051F56E /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -178,6 +227,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A8FC9E12603C5B70051F56E /* Build configuration list for PBXNativeTarget "GMAPP-Unit-Tests" */;
 			buildPhases = (
+				A2C1F67F9EF752AC41A1AE82 /* [CP] Check Pods Manifest.lock */,
 				7A8FC9D62603C5B60051F56E /* Sources */,
 				7A8FC9D72603C5B60051F56E /* Frameworks */,
 				7A8FC9D82603C5B60051F56E /* Resources */,
@@ -248,17 +298,87 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7A8FCA12260653D60051F56E /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		A2C1F67F9EF752AC41A1AE82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GMAPP-Unit-Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC29BBE15202D304384CC09A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GMAPP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7A8FC9AA2603BFB10051F56E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7A8FC9B42603BFB10051F56E /* ContentView.swift in Sources */,
+				7AA121892608686800CE55DC /* MainView.swift in Sources */,
+				7AA121852608682600CE55DC /* FavouriteGamesView.swift in Sources */,
 				7A8FC9EF2603C6C40051F56E /* Helpers.swift in Sources */,
 				7A8FC9D12603C04C0051F56E /* Game.swift in Sources */,
+				7AA12181260865F400CE55DC /* FavouriteGames.swift in Sources */,
 				7A8FC9FB2603CC980051F56E /* GameDetailsView.swift in Sources */,
 				7A8FC9B22603BFB10051F56E /* GMAPPApp.swift in Sources */,
+				7A8FCA18260655900051F56E /* Logger.swift in Sources */,
 				7A8FC9CE2603C0320051F56E /* GameService.swift in Sources */,
+				7A8FCA072605FA0A0051F56E /* NetworkError.swift in Sources */,
 				7A8FC9C72603BFF00051F56E /* Constants.swift in Sources */,
 				7A8FC9D42603C05E0051F56E /* GameRow.swift in Sources */,
 			);
@@ -402,9 +522,11 @@
 		};
 		7A8FC9BE2603BFB20051F56E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 350C1202B3FEF8016D1D3825 /* Pods-GMAPP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GMAPP/Preview Content\"";
 				DEVELOPMENT_TEAM = 7KN966P9LP;
@@ -417,6 +539,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lswarss.GMAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -424,9 +547,11 @@
 		};
 		7A8FC9BF2603BFB20051F56E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA93DEFED600E933FA3A0E3B /* Pods-GMAPP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GMAPP/Preview Content\"";
 				DEVELOPMENT_TEAM = 7KN966P9LP;
@@ -439,6 +564,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lswarss.GMAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -446,6 +572,7 @@
 		};
 		7A8FC9E22603C5B70051F56E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFEAEB38B0B85DC00E758D99 /* Pods-GMAPP-Unit-Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +593,7 @@
 		};
 		7A8FC9E32603C5B70051F56E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D083CD6E5A20D099C25DC8E /* Pods-GMAPP-Unit-Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
