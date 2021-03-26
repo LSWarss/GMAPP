@@ -27,5 +27,6 @@ struct FavouriteGamesView: View {
 struct FavouriteGamesView_Previews: PreviewProvider {
     static var previews: some View {
         FavouriteGamesView()
+            .environmentObject(FavouriteGames())
     }
 }

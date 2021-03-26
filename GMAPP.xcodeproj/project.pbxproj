@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A214BFA260E20B700DDA19B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A214BF9260E20B700DDA19B /* WidgetKit.framework */; };
+		7A214BFC260E20B700DDA19B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A214BFB260E20B700DDA19B /* SwiftUI.framework */; };
+		7A214BFF260E20B700DDA19B /* GMAPP_Release_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A214BFE260E20B700DDA19B /* GMAPP_Release_Widget.swift */; };
+		7A214C02260E20B800DDA19B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A214C01260E20B800DDA19B /* Assets.xcassets */; };
+		7A214C04260E20B800DDA19B /* GMAPP_Release_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7A214C00260E20B700DDA19B /* GMAPP_Release_Widget.intentdefinition */; };
+		7A214C05260E20B800DDA19B /* GMAPP_Release_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7A214C00260E20B700DDA19B /* GMAPP_Release_Widget.intentdefinition */; };
+		7A214C08260E20B800DDA19B /* GMAPP-Release-WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7A214BF8260E20B700DDA19B /* GMAPP-Release-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7A8FC9B22603BFB10051F56E /* GMAPPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9B12603BFB10051F56E /* GMAPPApp.swift */; };
 		7A8FC9B42603BFB10051F56E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9B32603BFB10051F56E /* ContentView.swift */; };
 		7A8FC9B62603BFB20051F56E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8FC9B52603BFB20051F56E /* Assets.xcassets */; };
@@ -27,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7A214C06260E20B800DDA19B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A8FC9A62603BFB10051F56E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A214BF7260E20B700DDA19B;
+			remoteInfo = "GMAPP-Release-WidgetExtension";
+		};
 		7A8FC9DF2603C5B70051F56E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7A8FC9A62603BFB10051F56E /* Project object */;
@@ -36,9 +50,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7A214C0C260E20B800DDA19B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7A214C08260E20B800DDA19B /* GMAPP-Release-WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0D083CD6E5A20D099C25DC8E /* Pods-GMAPP-Unit-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMAPP-Unit-Tests.release.xcconfig"; path = "Target Support Files/Pods-GMAPP-Unit-Tests/Pods-GMAPP-Unit-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		350C1202B3FEF8016D1D3825 /* Pods-GMAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMAPP.debug.xcconfig"; path = "Target Support Files/Pods-GMAPP/Pods-GMAPP.debug.xcconfig"; sourceTree = "<group>"; };
+		7A214BF8260E20B700DDA19B /* GMAPP-Release-WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "GMAPP-Release-WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A214BF9260E20B700DDA19B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		7A214BFB260E20B700DDA19B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		7A214BFE260E20B700DDA19B /* GMAPP_Release_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMAPP_Release_Widget.swift; sourceTree = "<group>"; };
+		7A214C00260E20B700DDA19B /* GMAPP_Release_Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = GMAPP_Release_Widget.intentdefinition; sourceTree = "<group>"; };
+		7A214C01260E20B800DDA19B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A214C03260E20B800DDA19B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A8FC9AE2603BFB10051F56E /* GMAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8FC9B12603BFB10051F56E /* GMAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMAPPApp.swift; sourceTree = "<group>"; };
 		7A8FC9B32603BFB10051F56E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +100,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7A214BF5260E20B700DDA19B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A214BFC260E20B700DDA19B /* SwiftUI.framework in Frameworks */,
+				7A214BFA260E20B700DDA19B /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A8FC9AB2603BFB10051F56E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,11 +134,31 @@
 			path = UtilViews;
 			sourceTree = "<group>";
 		};
+		7A214BFD260E20B700DDA19B /* GMAPP-Release-Widget */ = {
+			isa = PBXGroup;
+			children = (
+				7A214C10260E20CC00DDA19B /* Widget */,
+				7A214BFE260E20B700DDA19B /* GMAPP_Release_Widget.swift */,
+				7A214C00260E20B700DDA19B /* GMAPP_Release_Widget.intentdefinition */,
+				7A214C01260E20B800DDA19B /* Assets.xcassets */,
+				7A214C03260E20B800DDA19B /* Info.plist */,
+			);
+			path = "GMAPP-Release-Widget";
+			sourceTree = "<group>";
+		};
+		7A214C10260E20CC00DDA19B /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 		7A8FC9A52603BFB10051F56E = {
 			isa = PBXGroup;
 			children = (
 				7A8FC9B02603BFB10051F56E /* GMAPP */,
 				7A8FC9DB2603C5B70051F56E /* GMAPP-Unit-Tests */,
+				7A214BFD260E20B700DDA19B /* GMAPP-Release-Widget */,
 				7A8FC9AF2603BFB10051F56E /* Products */,
 				B88C2ED3737AFA68F558481B /* Pods */,
 				A606C6BF508AE970A46C5817 /* Frameworks */,
@@ -106,6 +170,7 @@
 			children = (
 				7A8FC9AE2603BFB10051F56E /* GMAPP.app */,
 				7A8FC9DA2603C5B60051F56E /* GMAPP-Unit-Tests.xctest */,
+				7A214BF8260E20B700DDA19B /* GMAPP-Release-WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,6 +251,8 @@
 		A606C6BF508AE970A46C5817 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A214BF9260E20B700DDA19B /* WidgetKit.framework */,
+				7A214BFB260E20B700DDA19B /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -204,6 +271,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7A214BF7260E20B700DDA19B /* GMAPP-Release-WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A214C09260E20B800DDA19B /* Build configuration list for PBXNativeTarget "GMAPP-Release-WidgetExtension" */;
+			buildPhases = (
+				7A214BF4260E20B700DDA19B /* Sources */,
+				7A214BF5260E20B700DDA19B /* Frameworks */,
+				7A214BF6260E20B700DDA19B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GMAPP-Release-WidgetExtension";
+			productName = "GMAPP-Release-WidgetExtension";
+			productReference = 7A214BF8260E20B700DDA19B /* GMAPP-Release-WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		7A8FC9AD2603BFB10051F56E /* GMAPP */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A8FC9BD2603BFB20051F56E /* Build configuration list for PBXNativeTarget "GMAPP" */;
@@ -213,10 +297,12 @@
 				7A8FC9AB2603BFB10051F56E /* Frameworks */,
 				7A8FC9AC2603BFB10051F56E /* Resources */,
 				7A8FCA12260653D60051F56E /* Swiftlint */,
+				7A214C0C260E20B800DDA19B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7A214C07260E20B800DDA19B /* PBXTargetDependency */,
 			);
 			name = GMAPP;
 			productName = GMAPP;
@@ -251,6 +337,9 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					7A214BF7260E20B700DDA19B = {
+						CreatedOnToolsVersion = 12.4;
+					};
 					7A8FC9AD2603BFB10051F56E = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -275,11 +364,20 @@
 			targets = (
 				7A8FC9AD2603BFB10051F56E /* GMAPP */,
 				7A8FC9D92603C5B60051F56E /* GMAPP-Unit-Tests */,
+				7A214BF7260E20B700DDA19B /* GMAPP-Release-WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7A214BF6260E20B700DDA19B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A214C02260E20B800DDA19B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A8FC9AC2603BFB10051F56E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -364,6 +462,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7A214BF4260E20B700DDA19B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A214C04260E20B800DDA19B /* GMAPP_Release_Widget.intentdefinition in Sources */,
+				7A214BFF260E20B700DDA19B /* GMAPP_Release_Widget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A8FC9AA2603BFB10051F56E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -376,6 +483,7 @@
 				7AA12181260865F400CE55DC /* FavouriteGames.swift in Sources */,
 				7A8FC9FB2603CC980051F56E /* GameDetailsView.swift in Sources */,
 				7A8FC9B22603BFB10051F56E /* GMAPPApp.swift in Sources */,
+				7A214C05260E20B800DDA19B /* GMAPP_Release_Widget.intentdefinition in Sources */,
 				7A8FCA18260655900051F56E /* Logger.swift in Sources */,
 				7A8FC9CE2603C0320051F56E /* GameService.swift in Sources */,
 				7A8FCA072605FA0A0051F56E /* NetworkError.swift in Sources */,
@@ -396,6 +504,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7A214C07260E20B800DDA19B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A214BF7260E20B700DDA19B /* GMAPP-Release-WidgetExtension */;
+			targetProxy = 7A214C06260E20B800DDA19B /* PBXContainerItemProxy */;
+		};
 		7A8FC9E02603C5B70051F56E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7A8FC9AD2603BFB10051F56E /* GMAPP */;
@@ -404,6 +517,50 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		7A214C0A260E20B800DDA19B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7KN966P9LP;
+				INFOPLIST_FILE = "GMAPP-Release-Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "lswarss.GMAPP.GMAPP-Release-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A214C0B260E20B800DDA19B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7KN966P9LP;
+				INFOPLIST_FILE = "GMAPP-Release-Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "lswarss.GMAPP.GMAPP-Release-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		7A8FC9BB2603BFB20051F56E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -524,6 +681,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 350C1202B3FEF8016D1D3825 /* Pods-GMAPP.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -549,6 +707,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA93DEFED600E933FA3A0E3B /* Pods-GMAPP.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -615,6 +774,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7A214C09260E20B800DDA19B /* Build configuration list for PBXNativeTarget "GMAPP-Release-WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A214C0A260E20B800DDA19B /* Debug */,
+				7A214C0B260E20B800DDA19B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7A8FC9A92603BFB10051F56E /* Build configuration list for PBXProject "GMAPP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

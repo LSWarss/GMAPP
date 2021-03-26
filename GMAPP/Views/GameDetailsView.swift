@@ -10,10 +10,9 @@ import SwiftUI
 struct GameDetailsView: View {
 
     var game : Game
-    
+
     var body: some View {
         ZStack{
-            Color.blue.opacity(0.5)
             VStack {
                 Text(game.title)
                     .font(.largeTitle)

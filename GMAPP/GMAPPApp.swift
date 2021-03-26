@@ -6,16 +6,18 @@
 //
 
 import SwiftUI
+import CoreData
 
 @main
 struct GMAPPApp: App {
-    // This handle lifeccycle of  object
-    @StateObject var fav = FavouriteGames()
     
+    @StateObject var favGames = FavouriteGames()
+    // This handle lifeccycle of  object
     var body: some Scene {
         WindowGroup {
             MainView()
-                .environmentObject(fav)
+                .environmentObject(favGames)
         }
     }
+    
 }
