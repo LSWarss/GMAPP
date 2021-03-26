@@ -14,8 +14,7 @@ struct GameRow: View {
     
     let game : Game
     @EnvironmentObject var fav: FavouriteGames
-    @State private var isFav = false
-    @State private var scale: CGFloat = 1
+    
     var body: some View {
         HStack {
             Image(systemName: "gamecontroller")
@@ -44,6 +43,10 @@ struct GameRow: View {
                         }
                     }
             }
+            .foregroundColor(fav.games.contains(where: {$0.id == game.id}) ? .purple : .black)
+            .padding(.horizontal, 5)
+            .scaleEffect(fav.games.contains(where: {$0.id == game.id}) ? 1.2 : 1.0 )
+            .animation(.easeOut)
             
         }
     }
