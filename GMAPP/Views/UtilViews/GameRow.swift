@@ -59,5 +59,6 @@ struct GameRow: View {
 struct GameRow_Previews: PreviewProvider {
     static var previews: some View {
         GameRow(game: Game.example)
+            .environmentObject(FavouriteGames())
     }
 }
