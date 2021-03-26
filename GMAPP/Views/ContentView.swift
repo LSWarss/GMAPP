@@ -67,7 +67,7 @@ struct ContentView: View {
                 ProgressView()
                     .progressViewStyle(CircularProgressViewStyle(tint: Color.purple)
                     )
-                    .scaleEffect(2, anchor: .center)
+                    .scaleEffect(1, anchor: .center)
             }
             
         }

@@ -15,6 +15,7 @@ struct GameRow: View {
     let game : Game
     @EnvironmentObject var fav: FavouriteGames
     @State private var isFav = false
+    
     var body: some View {
         HStack {
             Image(systemName: "gamecontroller")
@@ -31,15 +32,17 @@ struct GameRow: View {
                 }
             }
             
-            Image(systemName: "star")
-                .padding()
-                .scaleEffect(1.5)
-                .scaledToFill()
+            Image(systemName: isFav ? "star.fill" : "star")
                 .onTapGesture {
-                    self.foregroundColor(Color.green)
-                    fav.games.append(self.game)
-                    Logger.shared.log("Added game to fav: \(self.game.title)")
-                    Logger.shared.log("Number of fav's right now: \(fav.games.count)")
+                    if isFav {
+                        isFav.toggle()
+                        fav.removeGame(game: self.game)
+                        Logger.shared.log("Removed game from fav: \(self.game.title)")
+                    } else {
+                        isFav.toggle()
+                        fav.appendGame(game: self.game)
+                        Logger.shared.log("Added game to fav: \(self.game.title)")
+                    }
                 }
 //            Toggle("", isOn: $isFav)
                 
