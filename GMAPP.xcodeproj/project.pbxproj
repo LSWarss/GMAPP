@@ -90,13 +90,6 @@
 			path = UtilViews;
 			sourceTree = "<group>";
 		};
-		7A214BDC260DB0AE00DDA19B /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		7A8FC9A52603BFB10051F56E = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +113,6 @@
 		7A8FC9B02603BFB10051F56E /* GMAPP */ = {
 			isa = PBXGroup;
 			children = (
-				7A214BDC260DB0AE00DDA19B /* Controllers */,
 				7A8FC9C52603BFDB0051F56E /* Utility */,
 				7A8FC9C42603BFD50051F56E /* Views */,
 				7A8FC9C32603BFCF0051F56E /* Models */,
