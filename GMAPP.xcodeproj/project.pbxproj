@@ -31,6 +31,9 @@
 		7AA12181260865F400CE55DC /* FavouriteGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA12180260865F400CE55DC /* FavouriteGames.swift */; };
 		7AA121852608682600CE55DC /* FavouriteGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA121842608682600CE55DC /* FavouriteGamesView.swift */; };
 		7AA121892608686800CE55DC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA121882608686800CE55DC /* MainView.swift */; };
+		E08FBB10260FA512000DA844 /* ReleaseWidgetTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08FBB0F260FA512000DA844 /* ReleaseWidgetTimelineProvider.swift */; };
+		E08FBB22260FA597000DA844 /* ReleaseWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08FBB21260FA597000DA844 /* ReleaseWidgetEntry.swift */; };
+		E08FBB2B260FA62B000DA844 /* ReleaseWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08FBB2A260FA62B000DA844 /* ReleaseWidgetEntryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +100,9 @@
 		7AA121882608686800CE55DC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E08FBB01260FA2F9000DA844 /* GMAPP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GMAPP.entitlements; sourceTree = "<group>"; };
 		E08FBB02260FA313000DA844 /* GMAPP-Release-WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GMAPP-Release-WidgetExtension.entitlements"; sourceTree = "<group>"; };
+		E08FBB0F260FA512000DA844 /* ReleaseWidgetTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseWidgetTimelineProvider.swift; sourceTree = "<group>"; };
+		E08FBB21260FA597000DA844 /* ReleaseWidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseWidgetEntry.swift; sourceTree = "<group>"; };
+		E08FBB2A260FA62B000DA844 /* ReleaseWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseWidgetEntryView.swift; sourceTree = "<group>"; };
 		FA93DEFED600E933FA3A0E3B /* Pods-GMAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMAPP.release.xcconfig"; path = "Target Support Files/Pods-GMAPP/Pods-GMAPP.release.xcconfig"; sourceTree = "<group>"; };
 		FFEAEB38B0B85DC00E758D99 /* Pods-GMAPP-Unit-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMAPP-Unit-Tests.debug.xcconfig"; path = "Target Support Files/Pods-GMAPP-Unit-Tests/Pods-GMAPP-Unit-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,20 +145,15 @@
 		7A214BFD260E20B700DDA19B /* GMAPP-Release-Widget */ = {
 			isa = PBXGroup;
 			children = (
-				7A214C10260E20CC00DDA19B /* Widget */,
+				E08FBB29260FA5F9000DA844 /* Views */,
+				E08FBB20260FA588000DA844 /* Models */,
+				E08FBB0E260FA509000DA844 /* Widget */,
 				7A214BFE260E20B700DDA19B /* GMAPP_Release_Widget.swift */,
 				7A214C00260E20B700DDA19B /* GMAPP_Release_Widget.intentdefinition */,
 				7A214C01260E20B800DDA19B /* Assets.xcassets */,
 				7A214C03260E20B800DDA19B /* Info.plist */,
 			);
 			path = "GMAPP-Release-Widget";
-			sourceTree = "<group>";
-		};
-		7A214C10260E20CC00DDA19B /* Widget */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Widget;
 			sourceTree = "<group>";
 		};
 		7A8FC9A52603BFB10051F56E = {
@@ -278,6 +279,30 @@
 				E08FBB01260FA2F9000DA844 /* GMAPP.entitlements */,
 			);
 			path = Entitlements;
+			sourceTree = "<group>";
+		};
+		E08FBB0E260FA509000DA844 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				E08FBB0F260FA512000DA844 /* ReleaseWidgetTimelineProvider.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		E08FBB20260FA588000DA844 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E08FBB21260FA597000DA844 /* ReleaseWidgetEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E08FBB29260FA5F9000DA844 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E08FBB2A260FA62B000DA844 /* ReleaseWidgetEntryView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,6 +504,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A214C04260E20B800DDA19B /* GMAPP_Release_Widget.intentdefinition in Sources */,
+				E08FBB10260FA512000DA844 /* ReleaseWidgetTimelineProvider.swift in Sources */,
+				E08FBB22260FA597000DA844 /* ReleaseWidgetEntry.swift in Sources */,
+				E08FBB2B260FA62B000DA844 /* ReleaseWidgetEntryView.swift in Sources */,
 				7A214BFF260E20B700DDA19B /* GMAPP_Release_Widget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
