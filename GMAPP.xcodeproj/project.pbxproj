@@ -95,6 +95,8 @@
 		7AA12180260865F400CE55DC /* FavouriteGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteGames.swift; sourceTree = "<group>"; };
 		7AA121842608682600CE55DC /* FavouriteGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteGamesView.swift; sourceTree = "<group>"; };
 		7AA121882608686800CE55DC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E08FBB01260FA2F9000DA844 /* GMAPP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GMAPP.entitlements; sourceTree = "<group>"; };
+		E08FBB02260FA313000DA844 /* GMAPP-Release-WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GMAPP-Release-WidgetExtension.entitlements"; sourceTree = "<group>"; };
 		FA93DEFED600E933FA3A0E3B /* Pods-GMAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMAPP.release.xcconfig"; path = "Target Support Files/Pods-GMAPP/Pods-GMAPP.release.xcconfig"; sourceTree = "<group>"; };
 		FFEAEB38B0B85DC00E758D99 /* Pods-GMAPP-Unit-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMAPP-Unit-Tests.debug.xcconfig"; path = "Target Support Files/Pods-GMAPP-Unit-Tests/Pods-GMAPP-Unit-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,6 +180,7 @@
 		7A8FC9B02603BFB10051F56E /* GMAPP */ = {
 			isa = PBXGroup;
 			children = (
+				E08FBB03260FA32F000DA844 /* Entitlements */,
 				7A8FC9C52603BFDB0051F56E /* Utility */,
 				7A8FC9C42603BFD50051F56E /* Views */,
 				7A8FC9C32603BFCF0051F56E /* Models */,
@@ -266,6 +269,15 @@
 				0D083CD6E5A20D099C25DC8E /* Pods-GMAPP-Unit-Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E08FBB03260FA32F000DA844 /* Entitlements */ = {
+			isa = PBXGroup;
+			children = (
+				E08FBB02260FA313000DA844 /* GMAPP-Release-WidgetExtension.entitlements */,
+				E08FBB01260FA2F9000DA844 /* GMAPP.entitlements */,
+			);
+			path = Entitlements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -522,6 +534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "GMAPP/Entitlements/GMAPP-Release-WidgetExtension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7KN966P9LP;
@@ -535,7 +548,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -544,6 +557,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "GMAPP/Entitlements/GMAPP-Release-WidgetExtension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7KN966P9LP;
@@ -557,7 +571,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -684,6 +698,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GMAPP/Entitlements/GMAPP.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GMAPP/Preview Content\"";
@@ -699,7 +714,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -710,6 +725,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GMAPP/Entitlements/GMAPP.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GMAPP/Preview Content\"";
@@ -725,7 +741,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
