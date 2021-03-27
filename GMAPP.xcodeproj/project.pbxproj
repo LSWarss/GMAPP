@@ -10,7 +10,6 @@
 		7A214BFA260E20B700DDA19B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A214BF9260E20B700DDA19B /* WidgetKit.framework */; };
 		7A214BFC260E20B700DDA19B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A214BFB260E20B700DDA19B /* SwiftUI.framework */; };
 		7A214BFF260E20B700DDA19B /* GMAPP_Release_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A214BFE260E20B700DDA19B /* GMAPP_Release_Widget.swift */; };
-		7A214C02260E20B800DDA19B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A214C01260E20B800DDA19B /* Assets.xcassets */; };
 		7A214C04260E20B800DDA19B /* GMAPP_Release_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7A214C00260E20B700DDA19B /* GMAPP_Release_Widget.intentdefinition */; };
 		7A214C05260E20B800DDA19B /* GMAPP_Release_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7A214C00260E20B700DDA19B /* GMAPP_Release_Widget.intentdefinition */; };
 		7A214C08260E20B800DDA19B /* GMAPP-Release-WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7A214BF8260E20B700DDA19B /* GMAPP-Release-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -31,6 +30,16 @@
 		7AA12181260865F400CE55DC /* FavouriteGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA12180260865F400CE55DC /* FavouriteGames.swift */; };
 		7AA121852608682600CE55DC /* FavouriteGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA121842608682600CE55DC /* FavouriteGamesView.swift */; };
 		7AA121892608686800CE55DC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA121882608686800CE55DC /* MainView.swift */; };
+		E08FBB10260FA512000DA844 /* ReleaseWidgetTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08FBB0F260FA512000DA844 /* ReleaseWidgetTimelineProvider.swift */; };
+		E08FBB22260FA597000DA844 /* ReleaseWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08FBB21260FA597000DA844 /* ReleaseWidgetEntry.swift */; };
+		E08FBB2B260FA62B000DA844 /* ReleaseWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08FBB2A260FA62B000DA844 /* ReleaseWidgetEntryView.swift */; };
+		E08FBB35260FA7BB000DA844 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9D02603C04C0051F56E /* Game.swift */; };
+		E08FBB39260FA932000DA844 /* FavouriteGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA12180260865F400CE55DC /* FavouriteGames.swift */; };
+		E08FBB3D260FA943000DA844 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FCA17260655900051F56E /* Logger.swift */; };
+		E08FBB41260FA9AE000DA844 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9CA2603BFFB0051F56E /* Helpers.swift */; };
+		E08FBB46260FAE15000DA844 /* GameReleaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08FBB45260FAE15000DA844 /* GameReleaseView.swift */; };
+		E08FBB4B260FB103000DA844 /* GameReleaseNoFav.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08FBB4A260FB103000DA844 /* GameReleaseNoFav.swift */; };
+		E08FBB59260FB5C6000DA844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8FC9B52603BFB20051F56E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +81,6 @@
 		7A214BFB260E20B700DDA19B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		7A214BFE260E20B700DDA19B /* GMAPP_Release_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMAPP_Release_Widget.swift; sourceTree = "<group>"; };
 		7A214C00260E20B700DDA19B /* GMAPP_Release_Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = GMAPP_Release_Widget.intentdefinition; sourceTree = "<group>"; };
-		7A214C01260E20B800DDA19B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A214C03260E20B800DDA19B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A8FC9AE2603BFB10051F56E /* GMAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8FC9B12603BFB10051F56E /* GMAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMAPPApp.swift; sourceTree = "<group>"; };
@@ -95,6 +103,13 @@
 		7AA12180260865F400CE55DC /* FavouriteGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteGames.swift; sourceTree = "<group>"; };
 		7AA121842608682600CE55DC /* FavouriteGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteGamesView.swift; sourceTree = "<group>"; };
 		7AA121882608686800CE55DC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E08FBB01260FA2F9000DA844 /* GMAPP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GMAPP.entitlements; sourceTree = "<group>"; };
+		E08FBB02260FA313000DA844 /* GMAPP-Release-WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GMAPP-Release-WidgetExtension.entitlements"; sourceTree = "<group>"; };
+		E08FBB0F260FA512000DA844 /* ReleaseWidgetTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseWidgetTimelineProvider.swift; sourceTree = "<group>"; };
+		E08FBB21260FA597000DA844 /* ReleaseWidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseWidgetEntry.swift; sourceTree = "<group>"; };
+		E08FBB2A260FA62B000DA844 /* ReleaseWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseWidgetEntryView.swift; sourceTree = "<group>"; };
+		E08FBB45260FAE15000DA844 /* GameReleaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReleaseView.swift; sourceTree = "<group>"; };
+		E08FBB4A260FB103000DA844 /* GameReleaseNoFav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReleaseNoFav.swift; sourceTree = "<group>"; };
 		FA93DEFED600E933FA3A0E3B /* Pods-GMAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMAPP.release.xcconfig"; path = "Target Support Files/Pods-GMAPP/Pods-GMAPP.release.xcconfig"; sourceTree = "<group>"; };
 		FFEAEB38B0B85DC00E758D99 /* Pods-GMAPP-Unit-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMAPP-Unit-Tests.debug.xcconfig"; path = "Target Support Files/Pods-GMAPP-Unit-Tests/Pods-GMAPP-Unit-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,20 +152,13 @@
 		7A214BFD260E20B700DDA19B /* GMAPP-Release-Widget */ = {
 			isa = PBXGroup;
 			children = (
-				7A214C10260E20CC00DDA19B /* Widget */,
-				7A214BFE260E20B700DDA19B /* GMAPP_Release_Widget.swift */,
+				E08FBB29260FA5F9000DA844 /* Views */,
+				E08FBB20260FA588000DA844 /* Models */,
+				E08FBB0E260FA509000DA844 /* Widget */,
 				7A214C00260E20B700DDA19B /* GMAPP_Release_Widget.intentdefinition */,
-				7A214C01260E20B800DDA19B /* Assets.xcassets */,
 				7A214C03260E20B800DDA19B /* Info.plist */,
 			);
 			path = "GMAPP-Release-Widget";
-			sourceTree = "<group>";
-		};
-		7A214C10260E20CC00DDA19B /* Widget */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Widget;
 			sourceTree = "<group>";
 		};
 		7A8FC9A52603BFB10051F56E = {
@@ -178,6 +186,7 @@
 		7A8FC9B02603BFB10051F56E /* GMAPP */ = {
 			isa = PBXGroup;
 			children = (
+				E08FBB03260FA32F000DA844 /* Entitlements */,
 				7A8FC9C52603BFDB0051F56E /* Utility */,
 				7A8FC9C42603BFD50051F56E /* Views */,
 				7A8FC9C32603BFCF0051F56E /* Models */,
@@ -266,6 +275,42 @@
 				0D083CD6E5A20D099C25DC8E /* Pods-GMAPP-Unit-Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E08FBB03260FA32F000DA844 /* Entitlements */ = {
+			isa = PBXGroup;
+			children = (
+				E08FBB02260FA313000DA844 /* GMAPP-Release-WidgetExtension.entitlements */,
+				E08FBB01260FA2F9000DA844 /* GMAPP.entitlements */,
+			);
+			path = Entitlements;
+			sourceTree = "<group>";
+		};
+		E08FBB0E260FA509000DA844 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				7A214BFE260E20B700DDA19B /* GMAPP_Release_Widget.swift */,
+				E08FBB0F260FA512000DA844 /* ReleaseWidgetTimelineProvider.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		E08FBB20260FA588000DA844 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E08FBB21260FA597000DA844 /* ReleaseWidgetEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E08FBB29260FA5F9000DA844 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E08FBB2A260FA62B000DA844 /* ReleaseWidgetEntryView.swift */,
+				E08FBB45260FAE15000DA844 /* GameReleaseView.swift */,
+				E08FBB4A260FB103000DA844 /* GameReleaseNoFav.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,7 +419,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A214C02260E20B800DDA19B /* Assets.xcassets in Resources */,
+				E08FBB59260FB5C6000DA844 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,7 +512,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A214C04260E20B800DDA19B /* GMAPP_Release_Widget.intentdefinition in Sources */,
+				E08FBB4B260FB103000DA844 /* GameReleaseNoFav.swift in Sources */,
+				E08FBB35260FA7BB000DA844 /* Game.swift in Sources */,
+				E08FBB10260FA512000DA844 /* ReleaseWidgetTimelineProvider.swift in Sources */,
+				E08FBB39260FA932000DA844 /* FavouriteGames.swift in Sources */,
+				E08FBB41260FA9AE000DA844 /* Helpers.swift in Sources */,
+				E08FBB22260FA597000DA844 /* ReleaseWidgetEntry.swift in Sources */,
+				E08FBB2B260FA62B000DA844 /* ReleaseWidgetEntryView.swift in Sources */,
 				7A214BFF260E20B700DDA19B /* GMAPP_Release_Widget.swift in Sources */,
+				E08FBB46260FAE15000DA844 /* GameReleaseView.swift in Sources */,
+				E08FBB3D260FA943000DA844 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +576,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "GMAPP/Entitlements/GMAPP-Release-WidgetExtension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7KN966P9LP;
@@ -535,7 +590,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -544,6 +599,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "GMAPP/Entitlements/GMAPP-Release-WidgetExtension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7KN966P9LP;
@@ -557,7 +613,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -684,6 +740,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GMAPP/Entitlements/GMAPP.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GMAPP/Preview Content\"";
@@ -699,7 +756,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -710,6 +767,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GMAPP/Entitlements/GMAPP.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GMAPP/Preview Content\"";
@@ -725,7 +783,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -13,34 +13,36 @@ class FavouriteGames : ObservableObject {
     @Published var games = [Game]()
     
     init() {
-        games = decodeGamesToDefaults()
+        games = FavouriteGames.decodeGamesToDefaults()
         
     }
     
     func appendGame(game: Game) {
         games.append(game)
         encodeGamesToDefaults(games: games)
+        Helpers.refreshWidgetData()
     }
     
     func removeGame(game: Game) {
         if let index = games.firstIndex(where: {$0.id == game.id}) {
             games.remove(at: index)
             encodeGamesToDefaults(games: games)
+            Helpers.refreshWidgetData()
         }
     }
     
     fileprivate func encodeGamesToDefaults(games: [Game]) {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(games) {
-            let defaults = UserDefaults.standard
-            defaults.set(encoded, forKey: "favGames")
+            let shared = UserDefaults(suiteName: "group.gmapp")
+            shared?.setValue(encoded, forKey: "favGames")
         }
     }
     
-    fileprivate func decodeGamesToDefaults() -> [Game] {
+    static func decodeGamesToDefaults() -> [Game] {
         var favouriteGames = [Game]()
-        let defaults = UserDefaults.standard
-        if let favGames = try? defaults.object(forKey: "favGames") as? Data {
+        let shared = UserDefaults(suiteName: "group.gmapp")
+        if let favGames = try? shared?.object(forKey: "favGames") as? Data {
             let decoder = JSONDecoder()
             if let loadedGames = try? decoder.decode([Game].self, from: favGames) {
                 Logger.shared.log("Loaded games for UserDefaults: \(loadedGames.count)")

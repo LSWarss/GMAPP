@@ -18,15 +18,7 @@ struct GameDetailsView: View {
                     .font(.largeTitle)
                 Text(game.platform)
                 Text(Helpers.postgresDateToDateConverter(from: game.formattedDate), style: .date)
-                if Helpers.daysUntil(until: Helpers.postgresDateToDateConverter(from: game.formattedDate)) > 0 {
-                    Text("Days until premiere: \(Helpers.daysUntil(until: Helpers.postgresDateToDateConverter(from: game.formattedDate)))")
-                }
-                else if (Helpers.daysUntil(until: Helpers.postgresDateToDateConverter(from: game.formattedDate)) == 0) {
-                    Text("It's today! 🔥")
-                }
-                else {
-                    Text("It's here! 👏🏻")
-                }
+                Helpers.releaseDaysText(game: game)
                 
             }
         }.edgesIgnoringSafeArea(.all)

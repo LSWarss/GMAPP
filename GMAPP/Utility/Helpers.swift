@@ -6,7 +6,8 @@
 //
 
 import Foundation
-
+import WidgetKit
+import SwiftUI
 
 class Helpers {
     
@@ -53,5 +54,20 @@ class Helpers {
         return daysUntil.day!
     }
     
+    static func refreshWidgetData() {
+        WidgetCenter.shared.reloadAllTimelines()
+    }
+    
+    static func releaseDaysText(game : Game) -> Text {
+        if Helpers.daysUntil(until: Helpers.postgresDateToDateConverter(from: game.formattedDate)) > 0 {
+            return Text("Days until premiere: \(Helpers.daysUntil(until: Helpers.postgresDateToDateConverter(from: game.formattedDate)))")
+        }
+        else if (Helpers.daysUntil(until: Helpers.postgresDateToDateConverter(from: game.formattedDate)) == 0) {
+            return Text("It's today! 🔥")
+        }
+        else {
+            return Text("It's here! 👏🏻")
+        }
+    }
     
 }

@@ -21,9 +21,9 @@ struct Game : Codable, Identifiable {
         return String(release_array[0] + "-" + release_array[1] + "-" + release_array[2].prefix(2))
     }
     
-    #if DEBUG
+    
     static let example = Game(id: 12312, title: "Mass Effect Andromeda", platform: "PC", release_date: "2021-05-14T00:00:00.000Z")
-    #endif
+
     
     
 }
