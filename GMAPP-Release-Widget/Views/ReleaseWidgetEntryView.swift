@@ -13,13 +13,17 @@ struct ReleaseWidgetEntryView: View {
     var entry: ReleaseWidgetTimelineProvider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+        if entry.favGame.isEmpty {
+            GameReleaseNoFav()
+        } else {
+            GameReleaseView(entry: entry)
+        }
     }
 }
 
 struct ReleaseWidgetEntryViewPreview: PreviewProvider {
     static var previews: some View {
-        ReleaseWidgetEntryView(entry: ReleaseWidgetEntry(date: Date(), configuration: ConfigurationIntent()))
+        ReleaseWidgetEntryView(entry: ReleaseWidgetEntry(date: Date(), configuration: ConfigurationIntent(), favGame: [Game.example]))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

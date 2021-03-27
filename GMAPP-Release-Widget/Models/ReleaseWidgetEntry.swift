@@ -12,4 +12,5 @@ import WidgetKit
 struct ReleaseWidgetEntry: TimelineEntry {
     let date: Date
     let configuration: ConfigurationIntent
+    let favGame : [Game]
 }

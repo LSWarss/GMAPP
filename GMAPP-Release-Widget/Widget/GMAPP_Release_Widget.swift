@@ -18,6 +18,6 @@ struct GMAPP_Release_Widget: Widget {
             ReleaseWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("GMAPP Release Date Widget")
-        .description("This is the widget that shows you how long until your fav game premiere.")
+        .description("This is the widget that shows you how long until your fav 🎮 premiere.")
     }
 }

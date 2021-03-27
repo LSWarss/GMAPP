@@ -43,7 +43,7 @@ struct GameRow: View {
                         }
                     }
             }
-            .foregroundColor(fav.games.contains(where: {$0.id == game.id}) ? .purple : .black)
+            .foregroundColor(fav.games.contains(where: {$0.id == game.id}) ? .purple : .primary)
             .padding(.horizontal, 5)
             .scaleEffect(fav.games.contains(where: {$0.id == game.id}) ? 1.2 : 1.0 )
             .animation(.easeOut)
