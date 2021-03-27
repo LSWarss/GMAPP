@@ -10,7 +10,6 @@
 		7A214BFA260E20B700DDA19B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A214BF9260E20B700DDA19B /* WidgetKit.framework */; };
 		7A214BFC260E20B700DDA19B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A214BFB260E20B700DDA19B /* SwiftUI.framework */; };
 		7A214BFF260E20B700DDA19B /* GMAPP_Release_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A214BFE260E20B700DDA19B /* GMAPP_Release_Widget.swift */; };
-		7A214C02260E20B800DDA19B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A214C01260E20B800DDA19B /* Assets.xcassets */; };
 		7A214C04260E20B800DDA19B /* GMAPP_Release_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7A214C00260E20B700DDA19B /* GMAPP_Release_Widget.intentdefinition */; };
 		7A214C05260E20B800DDA19B /* GMAPP_Release_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7A214C00260E20B700DDA19B /* GMAPP_Release_Widget.intentdefinition */; };
 		7A214C08260E20B800DDA19B /* GMAPP-Release-WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7A214BF8260E20B700DDA19B /* GMAPP-Release-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -40,6 +39,7 @@
 		E08FBB41260FA9AE000DA844 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9CA2603BFFB0051F56E /* Helpers.swift */; };
 		E08FBB46260FAE15000DA844 /* GameReleaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08FBB45260FAE15000DA844 /* GameReleaseView.swift */; };
 		E08FBB4B260FB103000DA844 /* GameReleaseNoFav.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08FBB4A260FB103000DA844 /* GameReleaseNoFav.swift */; };
+		E08FBB59260FB5C6000DA844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8FC9B52603BFB20051F56E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +81,6 @@
 		7A214BFB260E20B700DDA19B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		7A214BFE260E20B700DDA19B /* GMAPP_Release_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMAPP_Release_Widget.swift; sourceTree = "<group>"; };
 		7A214C00260E20B700DDA19B /* GMAPP_Release_Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = GMAPP_Release_Widget.intentdefinition; sourceTree = "<group>"; };
-		7A214C01260E20B800DDA19B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A214C03260E20B800DDA19B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A8FC9AE2603BFB10051F56E /* GMAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8FC9B12603BFB10051F56E /* GMAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMAPPApp.swift; sourceTree = "<group>"; };
@@ -157,7 +156,6 @@
 				E08FBB20260FA588000DA844 /* Models */,
 				E08FBB0E260FA509000DA844 /* Widget */,
 				7A214C00260E20B700DDA19B /* GMAPP_Release_Widget.intentdefinition */,
-				7A214C01260E20B800DDA19B /* Assets.xcassets */,
 				7A214C03260E20B800DDA19B /* Info.plist */,
 			);
 			path = "GMAPP-Release-Widget";
@@ -421,7 +419,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A214C02260E20B800DDA19B /* Assets.xcassets in Resources */,
+				E08FBB59260FB5C6000DA844 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

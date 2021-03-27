@@ -65,7 +65,7 @@ struct ContentView: View {
                 Color(UIColor.systemBackground)
                     .edgesIgnoringSafeArea(.all)
                 ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle(tint: Color.purple)
+                    .progressViewStyle(CircularProgressViewStyle(tint: Color("AccentColor"))
                     )
                     .scaleEffect(1, anchor: .center)
             }

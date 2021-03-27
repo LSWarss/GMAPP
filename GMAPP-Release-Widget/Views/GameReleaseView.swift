@@ -17,6 +17,7 @@ struct GameReleaseView: View {
             Text(entry.favGame[0].title)
                 .font(.title3)
                 .bold()
+                .padding(.bottom, 10)
             Helpers.releaseDaysText(game: entry.favGame[0])
                 .multilineTextAlignment(.center)
         }
