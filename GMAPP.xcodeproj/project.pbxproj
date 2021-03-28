@@ -350,6 +350,8 @@
 				7A214C07260E20B800DDA19B /* PBXTargetDependency */,
 			);
 			name = GMAPP;
+			packageProductDependencies = (
+			);
 			productName = GMAPP;
 			productReference = 7A8FC9AE2603BFB10051F56E /* GMAPP.app */;
 			productType = "com.apple.product-type.application";
@@ -403,6 +405,8 @@
 				Base,
 			);
 			mainGroup = 7A8FC9A52603BFB10051F56E;
+			packageReferences = (
+			);
 			productRefGroup = 7A8FC9AF2603BFB10051F56E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
