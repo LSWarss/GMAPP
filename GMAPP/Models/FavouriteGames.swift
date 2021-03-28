@@ -22,8 +22,7 @@ class FavouriteGames : ObservableObject {
         games.append(game)
         encodeGamesToDefaults(games: games)
         Helpers.refreshWidgetData()
-        scheduleGameReleaseNotification(game: game
-        )
+        scheduleGameReleaseNotification(game: game)
     }
     
     func removeGame(game: Game) {
