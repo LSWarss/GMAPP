@@ -40,6 +40,7 @@
 		E08FBB46260FAE15000DA844 /* GameReleaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08FBB45260FAE15000DA844 /* GameReleaseView.swift */; };
 		E08FBB4B260FB103000DA844 /* GameReleaseNoFav.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08FBB4A260FB103000DA844 /* GameReleaseNoFav.swift */; };
 		E08FBB59260FB5C6000DA844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8FC9B52603BFB20051F56E /* Assets.xcassets */; };
+		E09E2235261062C600783F7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09E2234261062C600783F7F /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		E08FBB2A260FA62B000DA844 /* ReleaseWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseWidgetEntryView.swift; sourceTree = "<group>"; };
 		E08FBB45260FAE15000DA844 /* GameReleaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReleaseView.swift; sourceTree = "<group>"; };
 		E08FBB4A260FB103000DA844 /* GameReleaseNoFav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReleaseNoFav.swift; sourceTree = "<group>"; };
+		E09E2234261062C600783F7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA93DEFED600E933FA3A0E3B /* Pods-GMAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMAPP.release.xcconfig"; path = "Target Support Files/Pods-GMAPP/Pods-GMAPP.release.xcconfig"; sourceTree = "<group>"; };
 		FFEAEB38B0B85DC00E758D99 /* Pods-GMAPP-Unit-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMAPP-Unit-Tests.debug.xcconfig"; path = "Target Support Files/Pods-GMAPP-Unit-Tests/Pods-GMAPP-Unit-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +194,7 @@
 				7A8FC9C32603BFCF0051F56E /* Models */,
 				7A8FC9C22603BFCA0051F56E /* Services */,
 				7A8FC9B12603BFB10051F56E /* GMAPPApp.swift */,
+				E09E2234261062C600783F7F /* AppDelegate.swift */,
 				7A8FC9B52603BFB20051F56E /* Assets.xcassets */,
 				7A8FC9BA2603BFB20051F56E /* Info.plist */,
 				7A8FC9B72603BFB20051F56E /* Preview Content */,
@@ -341,7 +344,6 @@
 				7A8FC9AA2603BFB10051F56E /* Sources */,
 				7A8FC9AB2603BFB10051F56E /* Frameworks */,
 				7A8FC9AC2603BFB10051F56E /* Resources */,
-				7A8FCA12260653D60051F56E /* Swiftlint */,
 				7A214C0C260E20B800DDA19B /* Embed App Extensions */,
 			);
 			buildRules = (
@@ -446,24 +448,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7A8FCA12260653D60051F56E /* Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
 		A2C1F67F9EF752AC41A1AE82 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -536,6 +520,7 @@
 				7A8FC9B42603BFB10051F56E /* ContentView.swift in Sources */,
 				7AA121892608686800CE55DC /* MainView.swift in Sources */,
 				7AA121852608682600CE55DC /* FavouriteGamesView.swift in Sources */,
+				E09E2235261062C600783F7F /* AppDelegate.swift in Sources */,
 				7A8FC9EF2603C6C40051F56E /* Helpers.swift in Sources */,
 				7A8FC9D12603C04C0051F56E /* Game.swift in Sources */,
 				7AA12181260865F400CE55DC /* FavouriteGames.swift in Sources */,

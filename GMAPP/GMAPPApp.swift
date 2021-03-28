@@ -6,11 +6,10 @@
 //
 
 import SwiftUI
-import CoreData
 
 @main
 struct GMAPPApp: App {
-    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var favGames = FavouriteGames()
     // This handle lifeccycle of  object
     var body: some Scene {
