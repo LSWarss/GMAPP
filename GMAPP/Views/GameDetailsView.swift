@@ -31,6 +31,7 @@ struct GameDetailsView: View {
                         Text(game.description)
                             .padding()
                             .font(.body)
+                            .lineLimit(18)
                         HStack() {
                             Text("Users score: ")
                             Text(game.formattedScore)

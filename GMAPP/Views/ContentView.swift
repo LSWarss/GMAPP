@@ -18,10 +18,8 @@ struct ContentView: View {
         ZStack{
             NavigationView {
                 List(games) { game in
-                    NavigationLink(
-                        destination: GameDetailsView(game: game)){
-                        GameRow(game: game)
-                    }
+                    GameRow(game: game)
+                        .background(NavigationLink(destination: GameDetailsView(game: game)){})
                 }
                 .navigationTitle("Games")
                 .toolbar {
