@@ -9,8 +9,8 @@ import Foundation
 
 struct Constants {
     struct GMAPIDetails {
-          static let APIScheme = "http"
-          static let APIHost = "gmapi.org"
+          static let APIScheme = "https"
+          static let APIHost = "www.gmapi.org"
           static let APIPath = "/"
       }
     
