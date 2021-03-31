@@ -13,18 +13,25 @@ struct GameDetailsView: View {
     
     var body: some View {
         ZStack {
-            VStack {
+            Color("OffWhite")
+            VStack{
                 Text(game.title)
                     .font(.largeTitle)
+                    .fontWeight(.black)
                     .padding(10)
-                ZStack(alignment: .top ){
+                ZStack{
                     RoundedRectangle(cornerRadius: 25.0)
                         .fill(Color("OffWhite"))
                         .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
                         .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                        .frame(minWidth: 350, maxHeight: 550)
+                    
                     VStack{
-                        Text(game.platform)
-                            .padding(.top, 20)
+                        HStack(alignment: .center, spacing: 0) {
+                            Text("\(game.genre) ")
+                                .fontWeight(.bold)
+                            Text("- \(game.platform)")
+                        }
                         Text(Helpers.postgresDateToDateConverter(from: game.formattedDate), style: .date)
                         Helpers.releaseDaysText(game: game)
                         Text(game.description)
@@ -36,12 +43,10 @@ struct GameDetailsView: View {
                                 .bold()
                         }
                     }
-                    .padding()
-                }.ignoresSafeArea()
-            }.padding(.top, 100)
+                }
+            }.padding()
         }
-        .background(Color("OffWhite"))
-        .ignoresSafeArea()
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
