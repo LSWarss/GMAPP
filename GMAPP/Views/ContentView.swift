@@ -14,6 +14,7 @@ struct ContentView: View {
     @State private var resultVisibile = false
     
     var body: some View {
+        
         ZStack{
             NavigationView {
                 List(games) { game in
@@ -21,7 +22,8 @@ struct ContentView: View {
                         destination: GameDetailsView(game: game)){
                         GameRow(game: game)
                     }
-                }.navigationTitle("Games")
+                }
+                .navigationTitle("Games")
                 .toolbar {
                         Picker("Platform", selection: $platform) {
                             ForEach(Constants.platformTypes, id: \.self){
@@ -69,7 +71,6 @@ struct ContentView: View {
                     )
                     .scaleEffect(1, anchor: .center)
             }
-            
         }
     }
 }

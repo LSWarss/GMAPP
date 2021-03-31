@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
+    
     var body: some View {
         TabView {
             ContentView()
@@ -18,6 +19,8 @@ struct MainView: View {
                 .tabItem {
                     Label("Fav", systemImage: "bolt.heart.fill")
                 }
+        }.onAppear() {
+            UITabBar.appearance().barTintColor = .white
         }
     }
 }

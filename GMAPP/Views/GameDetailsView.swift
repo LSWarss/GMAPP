@@ -8,20 +8,44 @@
 import SwiftUI
 
 struct GameDetailsView: View {
-
+    
     var game : Game
-
+    
     var body: some View {
-        ZStack{
-            VStack {
+        ZStack {
+            Color(UIColor.systemBackground)
+            VStack{
                 Text(game.title)
-                    .font(.largeTitle)
-                Text(game.platform)
-                Text(Helpers.postgresDateToDateConverter(from: game.formattedDate), style: .date)
-                Helpers.releaseDaysText(game: game)
+                    .font(.title)
+                    .fontWeight(.black)
                 
-            }
-        }.edgesIgnoringSafeArea(.all)
+                ZStack{
+                    VStack{
+                        HStack(alignment: .center, spacing: 0) {
+                            Text("\(game.genre) ")
+                                .fontWeight(.bold)
+                            Text("- \(game.platform)")
+                        }
+                        Text(Helpers.postgresDateToDateConverter(from: game.formattedDate), style: .date)
+                        Helpers.releaseDaysText(game: game)
+                        Text(game.description)
+                            .padding()
+                            .font(.body)
+                        HStack() {
+                            Text("Users score: ")
+                            Text(game.formattedScore)
+                                .bold()
+                        }
+                    }.padding()
+                    .background(RoundedRectangle(cornerRadius: 25.0)
+                                    .fill(Color("OffWhite"))
+                                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
+                                    .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                                    .frame(minWidth: 350,maxHeight: 550))
+                }
+            }.padding()
+        }
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
