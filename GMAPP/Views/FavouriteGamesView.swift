@@ -18,8 +18,7 @@ struct FavouriteGamesView: View {
                     destination: GameDetailsView(game: game)){
                     GameRow(game: game)
                 }
-            }
-            .navigationTitle("Favourites")
+            }.navigationTitle("Favourites")
         }
     }
 }

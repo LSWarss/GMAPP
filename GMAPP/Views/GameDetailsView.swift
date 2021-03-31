@@ -13,19 +13,13 @@ struct GameDetailsView: View {
     
     var body: some View {
         ZStack {
-            Color("OffWhite")
+            Color(UIColor.systemBackground)
             VStack{
                 Text(game.title)
-                    .font(.largeTitle)
+                    .font(.title)
                     .fontWeight(.black)
-                    .padding(10)
+                
                 ZStack{
-                    RoundedRectangle(cornerRadius: 25.0)
-                        .fill(Color("OffWhite"))
-                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
-                        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-                        .frame(minWidth: 350, maxHeight: 550)
-                    
                     VStack{
                         HStack(alignment: .center, spacing: 0) {
                             Text("\(game.genre) ")
@@ -42,7 +36,12 @@ struct GameDetailsView: View {
                             Text(game.formattedScore)
                                 .bold()
                         }
-                    }
+                    }.padding()
+                    .background(RoundedRectangle(cornerRadius: 25.0)
+                                    .fill(Color("OffWhite"))
+                                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
+                                    .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                                    .frame(minWidth: 350,maxHeight: 550))
                 }
             }.padding()
         }
