@@ -14,7 +14,6 @@ struct FavouriteGamesView: View {
     var body: some View {
         NavigationView {
             List(fav.games){ game in
-                
                     GameRow(game: game)
                         .background(NavigationLink(
                                         destination: GameDetailsView(game: game)){})

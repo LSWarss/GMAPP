@@ -9,15 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var games = [Game]()
+    @EnvironmentObject var games : Games
     @State private var platform = "PC"
-    @State private var resultVisibile = false
-    
     var body: some View {
         
         ZStack{
             NavigationView {
-                List(games) { game in
+                List(games.list.filter{ game in
+                    return game.platform == platform
+                    
+                }) { game in
                     GameRow(game: game)
                         .background(NavigationLink(destination: GameDetailsView(game: game)){})
                 }
@@ -30,38 +31,8 @@ struct ContentView: View {
                         }
                         .pickerStyle(MenuPickerStyle())
                 }
-                .onAppear() {
-                    self.resultVisibile = false
-                    GameService().getGames(platform: platform, completion: { result in
-                        switch result {
-                        case .success(let games):
-                            self.games = games.filter { game in
-                                self.resultVisibile = true
-                                return Helpers.postgresDateToDateConverter(from: game.formattedDate) > Date()
-                            }
-                        case .failure(_):
-                            self.games = [Game.example]
-                        }
-                    })
-                }
-                .onChange(of: platform, perform: { platform in
-                    self.resultVisibile = false
-                    GameService().getGames(platform: platform, completion: { result in
-                        switch result {
-                        case .success(let games):
-                            self.games = games.filter { game in
-                                self.resultVisibile.toggle()
-                                return Helpers.postgresDateToDateConverter(from: game.formattedDate) > Date()
-                            }
-                            self.resultVisibile = true
-                        case .failure(_):
-                            self.games = [Game.example]
-                        }
-                    })
-                })
-                
             }
-            if(resultVisibile == false){
+            if(games.list.isEmpty){
                 Color(UIColor.systemBackground)
                     .edgesIgnoringSafeArea(.all)
                 ProgressView()

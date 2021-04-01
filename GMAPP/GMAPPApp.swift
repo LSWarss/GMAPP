@@ -11,11 +11,15 @@ import SwiftUI
 struct GMAPPApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var favGames = FavouriteGames()
+    @StateObject var games = Games()
+    @StateObject var genres = Genres()
     
     var body: some Scene {
         WindowGroup {
             MainView()
                 .environmentObject(favGames)
+                .environmentObject(games)
+                .environmentObject(genres)
         }
     }
     

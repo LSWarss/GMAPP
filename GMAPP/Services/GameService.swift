@@ -84,4 +84,62 @@ class GameService {
         }.resume()
     }
     
+    func getGenres(completion: @escaping (Result<[Genre], NetworkError>) -> Void) {
+        
+        guard let url = Helpers.createUrl(baseComponents: self.baseComponents, pathParams: ["games/", "/genres"]) else {
+            completion(.failure(.urlError))
+            return
+        }
+            
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            guard let data = data, error == nil else {
+                if let error = error {
+                    Logger.shared.error(error.localizedDescription)
+                    completion(.failure(.domainError))
+                }
+                return
+            }
+            
+            do {
+                let genres = try JSONDecoder().decode([Genre].self, from: data)
+                Logger.shared.log("\(genres.count)")
+                completion(.success(genres))
+            } catch {
+                Logger.shared.error("Decoding error")
+                completion(.failure(.decodingError))
+            }
+            
+           }.resume()
+       }
+    
+    func getPlatforms(completion: @escaping (Result<[Platform], NetworkError>) -> Void) {
+        
+        guard let url = Helpers.createUrl(baseComponents: self.baseComponents, pathParams: ["games/", "/platforms"]) else {
+            completion(.failure(.urlError))
+            return
+        }
+            
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            guard let data = data, error == nil else {
+                if let error = error {
+                    Logger.shared.error(error.localizedDescription)
+                    completion(.failure(.domainError))
+                }
+                return
+            }
+            
+            do {
+                let platforms = try JSONDecoder().decode([Platform].self, from: data)
+                Logger.shared.log("\(platforms.count)")
+                completion(.success(platforms))
+            } catch {
+                Logger.shared.error("Decoding error")
+                completion(.failure(.decodingError))
+            }
+            
+           }.resume()
+       }
+    
 }
