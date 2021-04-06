@@ -22,7 +22,9 @@ class Games : ObservableObject {
                     }
                 }
             case .failure(_):
-                self.list = [Game.example]
+                DispatchQueue.main.async {
+                    self.list = [Game.example]
+                }
             }
         })
     }

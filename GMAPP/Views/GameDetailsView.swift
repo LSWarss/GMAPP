@@ -22,7 +22,7 @@ struct GameDetailsView: View {
                 ZStack{
                     VStack{
                         HStack(alignment: .center, spacing: 0) {
-                            Text("\(game.genre) ")
+                            Text("\(game.genres[0]) ")
                                 .fontWeight(.bold)
                             Text("- \(game.platform)")
                         }
@@ -52,6 +52,9 @@ struct GameDetailsView: View {
 
 struct GameDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        GameDetailsView(game: Game.example)
+        Group {
+            GameDetailsView(game: Game.example)
+                .preferredColorScheme(.dark)
+        }
     }
 }

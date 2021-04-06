@@ -31,14 +31,16 @@ struct FilteringGamesView: View {
                     showingFilterSheet.toggle()
                 }).sheet(isPresented: $showingFilterSheet, content: {
                     if gameTitle.isEmpty {
-                        List(games.list.filter{ game in
-                            return game.genre == genres.list[genreIndex].genre
-                        }) { game in
-                        GameRow(game: game)
-                            .background(NavigationLink(destination: GameDetailsView(game: game)){})
-                    }.padding(0)
+                        List {
+                            ForEach(games.list.filter { game in
+                                return game.genres.contains(genres.list[genreIndex].genre)
+                            }) { game in
+                                GameRowLifting(game: game)
+                                    .background(NavigationLink(destination: GameDetailsView(game: game)){})
+                            }
+                        }
                     } else {
-                        GameDetailsView(game: games.list.filter{ $0.title == gameTitle}.first ?? Game.example)
+                        GameDetailsView(game: games.list.filter{ $0.title.contains(gameTitle)}.first ?? Game.example)
                     }
                 })
             }

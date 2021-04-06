@@ -19,7 +19,7 @@ struct ContentView: View {
                     return game.platform == platform
                     
                 }) { game in
-                    GameRow(game: game)
+                    GameRowLifting(game: game)
                         .background(NavigationLink(destination: GameDetailsView(game: game)){})
                 }
                 .navigationTitle("Games")
@@ -48,5 +48,10 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
+            .previewDevice("iPhone 12")
+            .environmentObject(FavouriteGames())
+            .environmentObject(Games())
+            .environmentObject(Genres())
     }
 }
