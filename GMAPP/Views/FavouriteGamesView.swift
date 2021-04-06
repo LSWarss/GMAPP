@@ -13,11 +13,13 @@ struct FavouriteGamesView: View {
     
     var body: some View {
         NavigationView {
-            List(fav.games){ game in
-                NavigationLink(
-                    destination: GameDetailsView(game: game)){
-                    GameRow(game: game)
+            List {
+                ForEach(fav.games) { game in
+                    GameRowLifting(game: game)
+                        .background(NavigationLink(
+                                        destination: GameDetailsView(game: game)){})
                 }
+               
             }.navigationTitle("Favourites")
         }
     }

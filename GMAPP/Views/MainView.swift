@@ -13,14 +13,17 @@ struct MainView: View {
         TabView {
             ContentView()
                 .tabItem {
-                    Label("Games", systemImage: "gamecontroller.fill")
+                    Label("", systemImage: "gamecontroller.fill")
+                }
+            FilteringGamesView()
+                .tabItem {
+                    Label("", systemImage: "magnifyingglass")
                 }
             FavouriteGamesView()
                 .tabItem {
-                    Label("Fav", systemImage: "bolt.heart.fill")
+                    Label("", systemImage: "bolt.heart.fill")
                 }
-        }.onAppear() {
-            UITabBar.appearance().barTintColor = .white
+            
         }
     }
 }

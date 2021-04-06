@@ -16,7 +16,7 @@ struct Game : Codable, Identifiable {
     let platform : String
     let release_date : String
     let description : String
-    let genre : String
+    let genres : [String]
     let developer : String
     let score: String
     
@@ -30,7 +30,7 @@ struct Game : Codable, Identifiable {
     }
     
     
-    static let example = Game(id: 12312, title: "Mass Effect Andromeda", platform: "PC", release_date: "2021-05-14T00:00:00.000Z", description: "Mass Effect: Legendary Edition is a compilation of the video games in the original Mass Effect trilogy: Mass Effect, Mass Effect 2, and Mass Effect 3. It is being developed by BioWare with assistance from Abstraction Games and Blind Squirrel Games, and published by Electronic Arts. All three games were remastered, with visual enhancements, technical improvements, and gameplay adjustments.", genre: "RPG", developer: "BioWare", score: "tbd")
+    static let example = Game(id: 12312, title: "Mass Effect Andromeda", platform: "PC", release_date: "2021-05-14T00:00:00.000Z", description: "Mass Effect: Legendary Edition is a compilation of the video games in the original Mass Effect trilogy: Mass Effect, Mass Effect 2, and Mass Effect 3. It is being developed by BioWare with assistance from Abstraction Games and Blind Squirrel Games, and published by Electronic Arts. All three games were remastered, with visual enhancements, technical improvements, and gameplay adjustments.", genres: ["RPG","Shooter"], developer: "BioWare", score: "tbd")
 
     
     
