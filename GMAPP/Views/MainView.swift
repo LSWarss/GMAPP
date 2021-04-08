@@ -11,7 +11,7 @@ struct MainView: View {
     
     var body: some View {
         TabView {
-            ContentView()
+            GamesView()
                 .tabItem {
                     Label("", systemImage: "gamecontroller.fill")
                 }

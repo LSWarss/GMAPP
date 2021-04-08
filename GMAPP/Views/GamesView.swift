@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct GamesView: View {
     
     @EnvironmentObject var games : Games
     @State private var platform = "PC"
@@ -47,7 +47,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        GamesView()
             .preferredColorScheme(.dark)
             .previewDevice("iPhone 12")
             .environmentObject(FavouriteGames())
