@@ -19,7 +19,7 @@ struct FavouriteGamesView: View {
                         .background(NavigationLink(
                                         destination: GameDetailsView(game: game)){})
                 }
-               
+                
             }.navigationTitle("Favourites")
         }
     }

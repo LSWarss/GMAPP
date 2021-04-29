@@ -48,7 +48,7 @@ struct GamesView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         GamesView()
-            .preferredColorScheme(.dark)
+            .preferredColorScheme(.light)
             .previewDevice("iPhone 12")
             .environmentObject(FavouriteGames())
             .environmentObject(Games())

@@ -45,9 +45,11 @@ struct GameRowLifting: View {
                             Text(game.formattedDate)
                         }.padding(.bottom, 5)
                         
-                        HStack {
-                            ForEach(game.genres, id: \.self) { genre in
-                                GenreBlob(genreName: genre)
+                        ScrollView(.horizontal, showsIndicators: false){
+                            HStack {
+                                ForEach(game.genres, id: \.self) { genre in
+                                    GenreBlob(genreName: genre)
+                                }
                             }
                         }
                     }
