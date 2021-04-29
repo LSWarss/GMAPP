@@ -32,6 +32,13 @@ struct GameDetailsView: View {
                             .padding()
                             .font(.body)
                             .lineLimit(18)
+                        ScrollView(.horizontal, showsIndicators: false){
+                            HStack{
+                                ForEach(game.genres, id: \.self) { genre in
+                                    GenreBlob(genreName: genre)
+                                }
+                            }
+                        }
                         HStack() {
                             Text("Users score: ")
                             Text(game.formattedScore)
@@ -54,7 +61,7 @@ struct GameDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             GameDetailsView(game: Game.example)
-                .preferredColorScheme(.dark)
+                .preferredColorScheme(.light)
         }
     }
 }
