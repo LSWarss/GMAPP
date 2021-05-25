@@ -10,13 +10,16 @@ import SwiftUI
 struct FilteringGamesView: View {
     
     //MARK: State Objects
-    @State private var showingFilterSheet = false
+    @State private var isPresented = false
     @State private var gameTitle : String = ""
     @State private var genreIndex = 0
     
     //MARK: Environment Objects
     @EnvironmentObject var games : Games
     @EnvironmentObject var genres : Genres
+    @Environment(\.presentationMode) var presentationMode
+    
+    
     
     var body: some View {
         NavigationView() {
@@ -28,9 +31,10 @@ struct FilteringGamesView: View {
                     }
                 }
                 Button("Show games", action: {
-                    showingFilterSheet.toggle()
-                }).sheet(isPresented: $showingFilterSheet, content: {
+                    isPresented.toggle()
+                }).sheet(isPresented: $isPresented, content: {
                     if gameTitle.isEmpty {
+                        NavigationView {
                         List {
                             ForEach(games.list.filter { game in
                                 return game.genres.contains(genres.list[genreIndex].genre)
@@ -38,6 +42,8 @@ struct FilteringGamesView: View {
                                 GameRowLifting(game: game)
                                     .background(NavigationLink(destination: GameDetailsView(game: game)){})
                             }
+                        }
+                        .navigationTitle(genres.list[genreIndex].genre)
                         }
                     } else {
                         GameDetailsView(game: games.list.filter{ $0.title.contains(gameTitle)}.first ?? Game.example)
@@ -51,5 +57,7 @@ struct FilteringGamesView: View {
 struct FilteringGamesView_Previews: PreviewProvider {
     static var previews: some View {
         FilteringGamesView()
+            .environmentObject(FavouriteGames())
+            .environmentObject(Genres())
     }
 }
