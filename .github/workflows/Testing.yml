@@ -18,9 +18,9 @@ jobs:
             -scheme GMAPP \
             -destination platform=iOS\ Simulator,OS=14.4,name=iPhone\ 12 \
             clean test | xcpretty
-      - name: Testing Swift package
-        run: |
-          set -eo pipefail
+      # - name: Testing Swift package
+      #   run: |
+      #     set -eo pipefail
 
-          cd GMAPP -package; swift test --parallel; cd ..
+      #     cd GMAPP -package; swift test --parallel; cd ..
       
