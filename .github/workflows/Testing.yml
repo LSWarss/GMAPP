@@ -10,13 +10,16 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v1
-      # - name: Testing Swift package
-      #   run: |
+      - name: Testing Swift package
+        run: |
+          set -eo pipefail
+
+          cd GMAPP    -package; swift test --parallel; cd ..
       - name: Testing iOS app
         run: |
           set -eo pipefail
 
           xcodebuild -workspace GMAPP.xcworkspace \
             -scheme GMAPP \
-            -destination platform=iOS\ Simulator,OS=14.5,name=iPhone\ 12 \
+            -destination platform=iOS\ Simulator,OS=14.4,name=iPhone\ 12 \
             clean test | xcpretty
