@@ -14,7 +14,7 @@ struct GameReleaseNoFav: View {
             Text("You don't have any fav 🎮 added to list yet")
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 10)
-            Button("Click here to add"){
+            Button("Click to Add"){
                 
             }
             .padding(8)
@@ -23,6 +23,7 @@ struct GameReleaseNoFav: View {
             .cornerRadius(8.0)
             
         }
+        .padding()
     }
 }
 

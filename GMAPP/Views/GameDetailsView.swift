@@ -28,10 +28,10 @@ struct GameDetailsView: View {
                         }
                         Text(Helpers.postgresDateToDateConverter(from: game.formattedDate), style: .date)
                         Helpers.releaseDaysText(game: game)
-                        Text(game.description)
-                            .padding()
+                        Text(game.description.isEmpty ? "Game description will be added by developer in the future... 🤖" : game.description)
+                            .padding(.horizontal)
                             .font(.body)
-                            .lineLimit(18)
+                            .frame(maxWidth: 350, maxHeight: 300, alignment: .center)
                         ScrollView(.horizontal, showsIndicators: false){
                             HStack{
                                 ForEach(game.genres, id: \.self) { genre in
@@ -39,6 +39,7 @@ struct GameDetailsView: View {
                                 }
                             }
                         }
+                        .padding(.horizontal)
                         HStack() {
                             Text("Users score: ")
                             Text(game.formattedScore)

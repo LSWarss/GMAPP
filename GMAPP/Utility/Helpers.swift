@@ -61,12 +61,15 @@ class Helpers {
     static func releaseDaysText(game : Game) -> Text {
         if Helpers.daysUntil(until: Helpers.postgresDateToDateConverter(from: game.formattedDate)) > 0 {
             return Text("Days until premiere: \(Helpers.daysUntil(until: Helpers.postgresDateToDateConverter(from: game.formattedDate)))")
+                .bold()
         }
         else if (Helpers.daysUntil(until: Helpers.postgresDateToDateConverter(from: game.formattedDate)) == 0) {
             return Text("It's today! 🔥")
+                .bold()
         }
         else {
             return Text("It's here! 👏🏻")
+                .bold()
         }
     }
     
