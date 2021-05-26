@@ -1,8 +1,11 @@
 name: Testing
 on:
+  push:
+    branches: 
+      - main
+      - '**'
   pull_request:
-    branches:
-    - main
+    branches: [ main ]
 jobs:
   test:
     name: Testing Swift Package and iOS app
